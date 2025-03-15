@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhklpylww4f72"]
+
+[ext_resource type="Texture2D" uid="uid://ce555mao7o4ea" path="res://use/office building.png" id="2_ouk20"]
+[ext_resource type="Script" uid="uid://iv2vh4jlftgr" path="res://start.gd" id="3_mae5d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mae5d"]
+texture = ExtResource("2_ouk20")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(0.862745, 0.74902, 0.662745, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(0.862745, 0.74902, 0.662745, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
+bg_color = Color(0.862745, 0.74902, 0.662745, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mae5d")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_left = 294.0
+offset_top = 238.0
+offset_right = 869.0
+offset_bottom = 578.0
+
+[node name="Welcome" type="Label" parent="."]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 253.0
+offset_right = 856.0
+offset_bottom = 366.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "We Are Looking Forward to
+Working With You!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -227.0
+offset_top = -259.0
+offset_right = 227.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.176471, 0.4, 0.486275, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+text = "Play"
+script = ExtResource("3_mae5d")
+
+[node name="Help" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.176471, 0.4, 0.486275, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_mae5d")
+text = "Help"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.176471, 0.4, 0.486275, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]
