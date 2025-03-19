@@ -34,9 +34,9 @@ func start_task() -> void:
 	task_box.set_task_data("Task Information")  # Example function to set task details
 
 # Function to handle the task_ended signal
-func _on_task_ended():
-	print("Task ended, resetting task_triggered")  # Debug statement
-	task_triggered = false  # Reset the task_triggered variable
-	cooldown = true  # Enable cooldown
-	await get_tree().create_timer(0.5).timeout  # Wait for 0.5 seconds
-	cooldown = false  # Disable cooldown
+#func _on_task_ended():
+	#print("Task ended, resetting task_triggered")  # Debug statement
+	#task_triggered = false  # Reset the task_triggered variable
+	#cooldown = true  # Enable cooldown
+	#await get_tree().create_timer(0.5).timeout  # Wait for 0.5 seconds
+	#cooldown = false  # Disable cooldown

@@ -18,3 +18,7 @@ func _on_task_completed():
 
 func _on_button2_pressed():
 	_on_task_completed()  # Call the task completion when Button2 is pressed
+
+
+func _on_pressed() -> void:
+	pass # Replace with function body.

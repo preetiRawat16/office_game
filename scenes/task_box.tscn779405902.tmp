@@ -73,6 +73,3 @@ offset_right = 71.132
 offset_bottom = 35.508
 text = "office"
 script = ExtResource("4_4es6u")
-
-[connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/Button2" to="TextureRect/Button2" method="_on_pressed"]
