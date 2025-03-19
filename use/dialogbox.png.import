@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcdwbcfkp33un"
-path="res://.godot/imported/Classroom_and_Library_Singles_48x48_51.png-621009c588cda705f3685fb74ccf118f.ctex"
+uid="uid://06shxrn5idsf"
+path="res://.godot/imported/dialogbox.png-0d351f310041424c8dac5484efc6f889.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://use/Classroom_and_Library_Singles_48x48_51.png"
-dest_files=["res://.godot/imported/Classroom_and_Library_Singles_48x48_51.png-621009c588cda705f3685fb74ccf118f.ctex"]
+source_file="res://use/dialogbox.png"
+dest_files=["res://.godot/imported/dialogbox.png-0d351f310041424c8dac5484efc6f889.ctex"]
 
 [params]
 

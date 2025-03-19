@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csr6klrjqtltw"
-path="res://.godot/imported/14.03.2025_10.19.57_REC.png-b5809d90699eaf2950ca161c48294ead.ctex"
+uid="uid://cxmcbpkval2sd"
+path="res://.godot/imported/action_box.png-0c283454a0fcb304ca36ec8a978ef207.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://use/14.03.2025_10.19.57_REC.png"
-dest_files=["res://.godot/imported/14.03.2025_10.19.57_REC.png-b5809d90699eaf2950ca161c48294ead.ctex"]
+source_file="res://use/action_box.png"
+dest_files=["res://.godot/imported/action_box.png-0c283454a0fcb304ca36ec8a978ef207.ctex"]
 
 [params]
 

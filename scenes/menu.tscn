@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dhklpylww4f72"]
 
-[ext_resource type="Texture2D" uid="uid://ce555mao7o4ea" path="res://use/office building.png" id="2_ouk20"]
-[ext_resource type="Script" uid="uid://iv2vh4jlftgr" path="res://start.gd" id="3_mae5d"]
+[ext_resource type="Texture2D" uid="uid://ce555mao7o4ea" path="res://use/office building.png" id="1_vjb58"]
+[ext_resource type="Script" uid="uid://iv2vh4jlftgr" path="res://start.gd" id="2_con2f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mae5d"]
-texture = ExtResource("2_ouk20")
+texture = ExtResource("1_vjb58")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
 bg_color = Color(0.862745, 0.74902, 0.662745, 1)
@@ -83,7 +83,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
 text = "Play"
-script = ExtResource("3_mae5d")
+script = ExtResource("2_con2f")
 
 [node name="Help" type="Button" parent="VBoxContainer"]
 layout_mode = 2

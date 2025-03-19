@@ -1,0 +1,17 @@
+{
+	"scene1": {
+		"receptionist": [
+			"Hello! You must be the new hire.",
+			"It's a pleasure to meet you! Since it's your first day, you have to go to the accountant to give your bank details."
+		],
+		"manager": [
+			"Hello there! How can I help you?"
+		]
+	},
+	"scene2": {
+		"receptionist": [
+			"Welcome back! Hope you had a great first day.",
+			"Today, you need to meet the HR manager for your onboarding session."
+		]
+	}
+}

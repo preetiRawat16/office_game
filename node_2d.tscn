@@ -1,11 +1,26 @@
 [gd_scene load_steps=8 format=3 uid="uid://ct3mpq7277ghr"]
 
-[ext_resource type="PackedScene" uid="uid://c7rhgan1ifxuo" path="res://reception_room.tscn" id="1_epypp"]
+[ext_resource type="PackedScene" uid="uid://c7rhgan1ifxuo" path="res://scenes/reception_room.tscn" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://cpujkbd7rbea3" path="res://characters/test_right.png" id="3_epypp"]
 [ext_resource type="Script" uid="uid://dvmuqxal0hk1k" path="res://character_body_2d.gd" id="12_2nhjh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0h7mo"]
 size = Vector2(66, 45)
+
+[sub_resource type="Animation" id="Animation_q6r6c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_0hol4"]
 resource_name = "player_right"
@@ -23,21 +38,6 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_q6r6c"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Body:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kdubu"]
 _data = {
 &"RESET": SubResource("Animation_q6r6c"),
@@ -49,6 +49,7 @@ _data = {
 [node name="reception room" parent="." instance=ExtResource("1_epypp")]
 
 [node name="Player" type="CharacterBody2D" parent="."]
+visible = false
 z_index = 1
 script = ExtResource("12_2nhjh")
 
