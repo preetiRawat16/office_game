@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="New Game Project"
-run/main_scene="uid://c7iajq1avc2np"
+run/main_scene="uid://c7rhgan1ifxuo"
 config/features=PackedStringArray("4.4", "Forward Plus")
+
+[autoload]
+
+Global="*res://Global.gd"
 
 [input]
 

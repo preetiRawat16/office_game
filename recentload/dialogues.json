@@ -1,0 +1,59 @@
+{
+	"act1scene1": {
+		"receptionist": [
+			"Hello, welcome to Mocha Tech. You must be the new hire. Let me walk you through the onboarding process. First please go to the HR Deparment, located on the 1 st floor.",
+			"You are to provide her with Work permit, Proof of Address, Bank Details, Copies of degrees and Signed Offer Letter.",
+			"Once you've handed those over to HR, they’ll guide you through the next steps",
+			"If you need any help finding the department or have questions later, feel free to come back here.",
+			"Welcome aboard, and I hope your onboarding goes smoothly"
+		],
+		"HR": [
+			"Good morning and welcome to the team! We're excited to have you with us. Before we start your day, I'll need a few documents from you."
+		],
+	},
+
+	"game1ends": {
+		"HR": [
+			"Thank you. You may now proceed to meet your coworker and manager — they are on the 2nd floor.",
+			"Your Manager will guide you through the work expectations, team responsibilities, and help you get started with your initial tasks."
+		],
+		
+		
+	},
+	"act2scene1": {
+		"Alice":[
+			"Hi. Im alice. Im usually great with email and document writing.",
+			"If you need any help, don't hesitate to reach out"
+		],
+		"Stacy":[
+			"Hi. Im Stacy. Im usually the one responsible for power bi.",
+			"If you need any help, let me know!"
+		],
+		"Manager":[
+			"Welcome to your first day. Im going to be your manager. Im looking forward to working with you.Lets start off with the basics.",
+			"First please go to Mark. He is the IT head and will provide you with your work email and access to company softwares",
+			"He is sitting right across me. Once you are done, we will discuss your first task."
+		],
+		"Mark":[
+			"You must be the new hire. Here is the access to your work id and softwares."
+		],
+	},
+	"act3scene1": {
+		"Stacy":[
+			"How can I help you?",
+		],
+		"Alice":[
+			"How can I help you?",
+		],
+	},
+	"finalscene": {
+		"Manager":[
+			"I see you’ve completed everything,",
+			"I hope you’ve learnt a little about how the company works",
+			"We look forward to meeting in real life"
+		],
+
+	},
+	
+	
+}
