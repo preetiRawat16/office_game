@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-# Speed in pixels/sec
+# Speed in pixels/sec. making a change
 var speed = 200
 
 # Variable to keep track of the last movement direction
