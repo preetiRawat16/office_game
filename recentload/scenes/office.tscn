@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://c7iajq1avc2np"]
+[gd_scene load_steps=63 format=4 uid="uid://c7iajq1avc2np"]
 
 [ext_resource type="Texture2D" uid="uid://d2wsn8nkvivln" path="res://use/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png" id="1_hub07"]
 [ext_resource type="Texture2D" uid="uid://c2qmqqn5a0ml3" path="res://use/Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow_48x48.png" id="2_2knxt"]
@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bccckppjy6j0e" path="res://characters/accountant_new.png" id="6_6hbky"]
 [ext_resource type="Script" uid="uid://ctgg5ixg4rr5d" path="res://scenes/chatdetection_alice.gd" id="6_gdafm"]
 [ext_resource type="PackedScene" uid="uid://jk7m62vo2l10" path="res://scenes/new_worker.tscn" id="7_2knxt"]
+[ext_resource type="Script" uid="uid://b4upi3shboiik" path="res://scenes/chatdetectionmanager.gd" id="8_o23kw"]
 [ext_resource type="Script" uid="uid://dqa2vndbx0u70" path="res://scenes/area_2d.gd" id="10_in4ui"]
+[ext_resource type="Script" uid="uid://b81ps42b4v7g3" path="res://scenes/chatdetection_mark.gd" id="10_wruke"]
 [ext_resource type="Script" uid="uid://c42v4qwgccj03" path="res://scenes/liftforofficescene.gd" id="11_6hbky"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
@@ -19518,6 +19520,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6hbky"]
+radius = 86.8332
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_bveom"]
 atlas = ExtResource("6_6hbky")
 region = Rect2(528, 0, 48, 96)
@@ -19567,6 +19572,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wruke"]
+size = Vector2(116, 102)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i814"]
 texture = ExtResource("2_2knxt")
@@ -24212,11 +24220,25 @@ sprite_frames = SubResource("SpriteFrames_46so7")
 autoplay = "default"
 frame_progress = 0.710938
 
+[node name="chatdetectionmanager" type="Area2D" parent="Layer0/TileMapLayer3/HR"]
+script = ExtResource("8_o23kw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer3/HR/chatdetectionmanager"]
+position = Vector2(-45, 35)
+shape = SubResource("CircleShape2D_6hbky")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Layer0/TileMapLayer3"]
 position = Vector2(621, 584)
 sprite_frames = SubResource("SpriteFrames_qt548")
 autoplay = "default"
 frame_progress = 0.904581
+
+[node name="chatdetectionMark" type="Area2D" parent="Layer0/TileMapLayer3/AnimatedSprite2D"]
+script = ExtResource("10_wruke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark"]
+position = Vector2(25, 8)
+shape = SubResource("RectangleShape2D_wruke")
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="Layer0"]
 tile_map_data = PackedByteArray("AAAOABgAAAADABkAAAAPABgAAAAEABkAAAAQABgAAAAFABkAAAAgABkAAAADABkAAAAgABoAAAADABoAAAAgABsAAAADABsAAAAgABwAAAADABwAAAAgAB0AAAADAB0AAAAhABkAAAAEABkAAAAhABoAAAAEABoAAAAhABsAAAAEABsAAAAhABwAAAAEABwAAAAhAB0AAAAEAB0AAAAiABkAAAAFABkAAAAiABoAAAAFABoAAAAiABsAAAAFABsAAAAiABwAAAAFABwAAAAiAB0AAAAFAB0AAAAOABkAAAADABkAAAAOABoAAAADABoAAAAOABsAAAADABsAAAAOABwAAAADABwAAAAOAB0AAAADAB0AAAAPABkAAAAEABkAAAAPABoAAAAEABoAAAAPABsAAAAEABsAAAAPABwAAAAEABwAAAAPAB0AAAAEAB0AAAAQABkAAAAFABkAAAAQABoAAAAFABoAAAAQABsAAAAFABsAAAAQABwAAAAFABwAAAAQAB0AAAAFAB0AAAAaAA4AAAADABkAAAAaAA8AAAADABoAAAAaABAAAAADABsAAAAaABEAAAADABwAAAAaABIAAAADAB0AAAAbAA4AAAAEABkAAAAbAA8AAAAEABoAAAAbABAAAAAEABsAAAAbABEAAAAEABwAAAAbABIAAAAEAB0AAAAcAA4AAAAFABkAAAAcAA8AAAAFABoAAAAcABAAAAAFABsAAAAcABEAAAAFABwAAAAcABIAAAAFAB0AAAAyABgAAAADABkAAAAzABgAAAAEABkAAAA0ABgAAAAFABkAAAAyABkAAAADABoAAAAyABoAAAADABsAAAAyABsAAAADABwAAAAyABwAAAADAB0AAAAzABoAAAAEABsAAAAzABsAAAAEABwAAAAzABwAAAAEAB0AAAA0ABkAAAAFABoAAAA0ABoAAAAFABsAAAA0ABsAAAAFABwAAAA0ABwAAAAFAB0AAAAzABkAAAAEABoAAAAvAA4AAAAOABgAAAAtABAAAAAMABoAAAAtABEAAAAMABsAAAAtABIAAAAMABwAAAAtABMAAAAMAB0AAAAuAA8AAAANABkAAAAuABAAAAANABoAAAAuABEAAAANABsAAAAuABIAAAANABwAAAAuABMAAAANAB0AAAAvAA8AAAAOABkAAAAvABAAAAAOABoAAAAvABEAAAAOABsAAAAvABIAAAAOABwAAAAvABMAAAAOAB0AAAAEAAQAAAAJAC4AAAAEAAUAAAAJAC8AAAAEAAYAAAAJADAAAAAEAAcAAAAJADEAAAAFAAQAAAAKAC4AAAAFAAUAAAAKAC8AAAAFAAYAAAAKADAAAAAFAAcAAAAKADEAAAAGAAQAAAALAC4AAAAGAAUAAAALAC8AAAAGAAYAAAALADAAAAAGAAcAAAALADEAAAAyABQAAAAGACwAAAAyABUAAAAGAC0AAAAzABQAAAAHACwAAAAzABUAAAAHAC0AAAA0ABQAAAAIACwAAAA0ABUAAAAIAC0AAAAmABkAAAADACsAAAAmABoAAAADACwAAAAnABgAAAAEACoAAAAnABkAAAAEACsAAAAnABoAAAAEACwAAAAoABgAAAAFACoAAAAoABkAAAAFACsAAAAoABoAAAAFACwAAAA=")
@@ -24234,7 +24256,7 @@ position = Vector2(-704, -410)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(49, 4, 48, 86, 45, 149, 1, 149, 0, 233, 43, 231, 45, 334, 88, 334, 75, 393, 804, 404, 814, 486, 766, 489, 766, 465, 700, 463, 699, 581, 641, 576, 642, 632, 964, 634, 964, 528, 1058, 534, 1058, 637, 1100, 637, 1104, 610, 1138, 608, 1137, 497, 1095, 486, 1082, 463, 951, 465, 951, 486, 913, 489, 920, 400, 1098, 389, 1098, 352, 1138, 349, 1135, 94, 1087, 94, 938, 80, 796, 67, 698, 63, 217, 75, 167, 72, 97, 59, 61, 91, 496, 14, 1272, 64, 1185, 669, 37, 668, -20, 333, -44, 81)
+polygon = PackedVector2Array(49, 4, 48, 86, 45, 149, 1, 149, 0, 233, 43, 231, 45, 334, 88, 334, 75, 393, 804, 404, 814, 486, 766, 489, 766, 465, 700, 463, 699, 581, 641, 576, 642, 632, 964, 634, 964, 528, 1053, 535, 1058, 637, 1100, 637, 1104, 610, 1138, 608, 1137, 497, 1095, 486, 1082, 463, 951, 465, 951, 486, 913, 489, 920, 400, 1098, 389, 1098, 352, 1138, 349, 1135, 94, 1087, 94, 938, 80, 796, 67, 698, 63, 217, 75, 167, 72, 97, 59, 61, 91, 496, 14, 1272, 64, 1185, 669, 37, 668, -20, 333, -44, 81)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
@@ -24271,6 +24293,10 @@ shape = SubResource("RectangleShape2D_o23kw")
 [connection signal="body_exited" from="Layer0/TileMapLayer2/coworker1/chatdetection" to="Layer0/TileMapLayer2/coworker1/chatdetection" method="_on_body_exited"]
 [connection signal="body_entered" from="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" to="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" method="_on_body_entered"]
 [connection signal="body_exited" from="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" to="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" method="_on_body_exited"]
+[connection signal="body_entered" from="Layer0/TileMapLayer3/HR/chatdetectionmanager" to="Layer0/TileMapLayer3/HR/chatdetectionmanager" method="_on_body_entered"]
+[connection signal="body_exited" from="Layer0/TileMapLayer3/HR/chatdetectionmanager" to="Layer0/TileMapLayer3/HR/chatdetectionmanager" method="_on_body_exited"]
+[connection signal="body_entered" from="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" to="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" method="_on_body_entered"]
+[connection signal="body_exited" from="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" to="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" method="_on_body_exited"]
 [connection signal="body_entered" from="deskcollision" to="deskcollision" method="_on_body_entered"]
 [connection signal="body_exited" from="deskcollision" to="deskcollision" method="_on_body_exited"]
 [connection signal="body_entered" from="liftforofficescene" to="liftforofficescene" method="_on_body_entered_lift"]
