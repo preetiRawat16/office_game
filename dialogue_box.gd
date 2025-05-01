@@ -9,7 +9,7 @@ signal dialogue_ended  # Signal for when dialogue ends
 var dialogue_data = {}
 var current_npc = ""
 var dialogue_index = 0
-var current_scene = "scene1"  # Start with Scene 1
+var current_scene = "act1scene1"  # Start with Scene 1
 
 func _ready():
 	load_dialogue_data()
@@ -61,7 +61,7 @@ func next_dialogue():
 			end_dialogue()  # Ensures exit when dialogue is finished
 
 func switch_to_scene_2():
-	current_scene = "scene2"
+	current_scene = "act1scene2"
 	print("Switched to Scene 2")
 	set_npc_dialogue("receptionist")  # Restart dialogue for Scene 2
 
