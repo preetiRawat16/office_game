@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var npc_name: String = "Alice"  # Set this in inspector for each NPC
+@export var npc_name: String = "HR"  # Set this in inspector for each NPC
 var player_in_range = false
 var dialogue_triggered = false
 var cooldown = false
@@ -30,7 +30,11 @@ func start_dialogue():
 	get_tree().root.add_child(dialogue)
 	dialogue.current_scene = Global.sceneChange  # Ensure correct scene is set
 	dialogue.connect("dialogue_ended", _on_dialogue_ended)
-	dialogue.set_npc_dialogue(npc_name)  # Use the exported npc_name
+	dialogue.set_npc_dialogue(npc_name) 
+	startgame()
+	
+func startgame():
+	Global.sceneChange = "game1ends" # Use the exported npc_name
 
 func _on_dialogue_ended():
 	cooldown = true

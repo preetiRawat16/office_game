@@ -2,13 +2,14 @@ extends Control  # Change if needed
 
 signal task_ended  # Declare the signal
 
-@onready var 2ndfloor_rec = $TextureRect/2ndrecbtn
-@onready var button = $TextureRect/receptionbtn
+@onready var secondfloor_rec = $TextureRect/recbtn2
+@onready var firstfloor_rec = $TextureRect/recbtn1
  # Ensure this matches your button's path
 
 func _ready():
-	button2.pressed.connect(_on_button2_pressed)
-	button.pressed.connect(_on_button_pressed)
+	secondfloor_rec.pressed.connect(_on_button2_pressed)
+	firstfloor_rec.pressed.connect(_on_button_pressed)
+	#button.pressed.connect(_on_button_pressed)
 
 func set_task_data(data: String):
 	print("Task data set:", data)  # Example function to receive task details

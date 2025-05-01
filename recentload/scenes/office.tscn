@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://c7iajq1avc2np"]
+[gd_scene load_steps=59 format=4 uid="uid://c7iajq1avc2np"]
 
 [ext_resource type="Texture2D" uid="uid://d2wsn8nkvivln" path="res://use/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png" id="1_hub07"]
 [ext_resource type="Texture2D" uid="uid://c2qmqqn5a0ml3" path="res://use/Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow_48x48.png" id="2_2knxt"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://ctgg5ixg4rr5d" path="res://scenes/chatdetection_alice.gd" id="6_gdafm"]
 [ext_resource type="PackedScene" uid="uid://jk7m62vo2l10" path="res://scenes/new_worker.tscn" id="7_2knxt"]
 [ext_resource type="Script" uid="uid://dqa2vndbx0u70" path="res://scenes/area_2d.gd" id="10_in4ui"]
+[ext_resource type="Script" uid="uid://c42v4qwgccj03" path="res://scenes/liftforofficescene.gd" id="11_6hbky"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
 texture = ExtResource("1_hub07")
@@ -24145,6 +24146,9 @@ size = Vector2(24, 35)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hbky"]
 size = Vector2(140, 112)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o23kw"]
+size = Vector2(80, 213)
+
 [node name="Office" type="Node2D"]
 
 [node name="Layer0" type="TileMap" parent="."]
@@ -24225,7 +24229,7 @@ position = Vector2(1056.5, 206)
 shape = SubResource("RectangleShape2D_fmddn")
 
 [node name="Player" parent="." instance=ExtResource("7_2knxt")]
-position = Vector2(-752, -407)
+position = Vector2(-704, -410)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -24249,16 +24253,25 @@ shape = SubResource("RectangleShape2D_2knxt")
 position = Vector2(920, 592)
 shape = SubResource("RectangleShape2D_gdafm")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="deskcollision" type="Area2D" parent="."]
 script = ExtResource("10_in4ui")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deskcollision"]
 position = Vector2(432, 191)
 shape = SubResource("RectangleShape2D_6hbky")
+
+[node name="liftforofficescene" type="Area2D" parent="."]
+script = ExtResource("11_6hbky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="liftforofficescene"]
+position = Vector2(7, 180)
+shape = SubResource("RectangleShape2D_o23kw")
 
 [connection signal="body_entered" from="Layer0/TileMapLayer2/coworker1/chatdetection" to="Layer0/TileMapLayer2/coworker1/chatdetection" method="_on_body_entered"]
 [connection signal="body_exited" from="Layer0/TileMapLayer2/coworker1/chatdetection" to="Layer0/TileMapLayer2/coworker1/chatdetection" method="_on_body_exited"]
 [connection signal="body_entered" from="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" to="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" method="_on_body_entered"]
 [connection signal="body_exited" from="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" to="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" method="_on_body_exited"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="deskcollision" to="deskcollision" method="_on_body_entered"]
+[connection signal="body_exited" from="deskcollision" to="deskcollision" method="_on_body_exited"]
+[connection signal="body_entered" from="liftforofficescene" to="liftforofficescene" method="_on_body_entered_lift"]
+[connection signal="body_exited" from="liftforofficescene" to="liftforofficescene" method="_on_body_exited_lift"]

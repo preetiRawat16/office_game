@@ -7,18 +7,11 @@
 			"If you need any help finding the department or have questions later, feel free to come back here.",
 			"Welcome aboard, and I hope your onboarding goes smoothly"
 		],
-	},
-	"act1scene2": {
-		"receptionist":["I am a placeholder"],
 		"HR": [
-			"Hello. How can I help you?",
+			"Good morning and welcome to the team! We're excited to have you with us. Before we start your day, I'll need a few documents from you."
 		],
-		"Player":["I am the new junior software developer. I was informed to submit my documents for onboarding today."],
-		"HR": [
-			"Ah yes. I was informed about this. If you could just hand me the documents, that would be great",
-		],
-		
 	},
+
 	"game1ends": {
 		"HR": [
 			"Thank you. You may now proceed to meet your coworker and manager — they are on the 2nd floor.",

@@ -1,7 +1,7 @@
 extends Area2D
 
 var player_in_range = false
-@onready var task_scene = preload("res://scenes/task_box.tscn")  # Load the task box scene
+@onready var task_scene = preload("res://scenes/reclift.tscn")  # Load the task box scene
 var task_triggered = false
 var cooldown = false  # Cooldown variable
 @onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
@@ -27,9 +27,11 @@ func _process(delta: float) -> void:
 			start_task()
 
 func start_task() -> void:
-	var d = dialogue_scene.instantiate()
+	
 	var task_box = task_scene.instantiate()
-	d.setscene("act2scene1")
+	#print(Global.sceneChange)
+	#Global.sceneChange = "act2scene1"
+	#print(Global.sceneChange)
 	get_tree().root.add_child(task_box)
 	# Connect the task_ended signal to a function
 	task_box.connect("task_ended", Callable(self, "_on_task_ended"))

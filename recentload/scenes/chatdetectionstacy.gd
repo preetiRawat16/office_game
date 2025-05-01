@@ -28,7 +28,8 @@ func _process(delta):
 func start_dialogue():
 	var dialogue = dialogue_scene.instantiate()
 	get_tree().root.add_child(dialogue)
-	dialogue.current_scene = "act2scene1"  # Ensure correct scene is set
+	print(dialogue.current_scene)
+	dialogue.current_scene = Global.sceneChange  # Ensure correct scene is set
 	dialogue.connect("dialogue_ended", _on_dialogue_ended)
 	dialogue.set_npc_dialogue(npc_name)  # Use the exported npc_name
 
