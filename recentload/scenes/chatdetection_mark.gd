@@ -29,7 +29,9 @@ func start_dialogue():
 	var dialogue = dialogue_scene.instantiate()
 	get_tree().root.add_child(dialogue)
 	print(dialogue.current_scene)
-	Global.sceneChange = "act3scene1"
+	if Global.sceneChange != "act1scene1":
+		Global.sceneChange = "act3scene1"
+	print(dialogue.current_scene)
 	dialogue.current_scene = Global.sceneChange  # Ensure correct scene is set
 	dialogue.connect("dialogue_ended", _on_dialogue_ended)
 	dialogue.set_npc_dialogue(npc_name)  # Use the exported npc_name

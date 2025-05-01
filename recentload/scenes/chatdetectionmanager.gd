@@ -28,7 +28,7 @@ func _process(delta):
 func start_dialogue():
 	var dialogue = dialogue_scene.instantiate()
 	get_tree().root.add_child(dialogue)
-	print(dialogue.current_scene)
+	
 	dialogue.current_scene = Global.sceneChange  # Ensure correct scene is set
 	dialogue.connect("dialogue_ended", _on_dialogue_ended)
 	dialogue.set_npc_dialogue(npc_name)  # Use the exported npc_name
@@ -38,3 +38,5 @@ func _on_dialogue_ended():
 	await get_tree().create_timer(0.5).timeout
 	dialogue_triggered = false
 	cooldown = false
+	if Global.sceneChange != "act1scene1":
+		Global.sceneChange= "clickupstarts"

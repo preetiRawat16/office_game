@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://c7iajq1avc2np"]
+[gd_scene load_steps=72 format=4 uid="uid://c7iajq1avc2np"]
 
 [ext_resource type="Texture2D" uid="uid://d2wsn8nkvivln" path="res://use/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png" id="1_hub07"]
 [ext_resource type="Texture2D" uid="uid://c2qmqqn5a0ml3" path="res://use/Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow_48x48.png" id="2_2knxt"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://dqa2vndbx0u70" path="res://scenes/area_2d.gd" id="10_in4ui"]
 [ext_resource type="Script" uid="uid://b81ps42b4v7g3" path="res://scenes/chatdetection_mark.gd" id="10_wruke"]
 [ext_resource type="Script" uid="uid://c42v4qwgccj03" path="res://scenes/liftforofficescene.gd" id="11_6hbky"]
+[ext_resource type="Texture2D" uid="uid://dmii3a4a41ccj" path="res://use/emailsprite.png" id="11_ujkv6"]
+[ext_resource type="Script" uid="uid://bmaa82ljstfdm" path="res://scenes/animated_sprite_2d_2.gd" id="12_k578b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
 texture = ExtResource("1_hub07")
@@ -19576,6 +19578,56 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wruke"]
 size = Vector2(116, 102)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k578b"]
+atlas = ExtResource("11_ujkv6")
+region = Rect2(0, 0, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07d2k"]
+atlas = ExtResource("11_ujkv6")
+region = Rect2(48, 0, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnmmx"]
+atlas = ExtResource("11_ujkv6")
+region = Rect2(96, 0, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp1e5"]
+atlas = ExtResource("11_ujkv6")
+region = Rect2(144, 0, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kviqm"]
+atlas = ExtResource("11_ujkv6")
+region = Rect2(192, 0, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ja80a"]
+atlas = ExtResource("11_ujkv6")
+region = Rect2(0, 96, 48, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alkg7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k578b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07d2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnmmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp1e5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kviqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ja80a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i814"]
 texture = ExtResource("2_2knxt")
 0:1/0 = 0
@@ -24239,6 +24291,13 @@ script = ExtResource("10_wruke")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark"]
 position = Vector2(25, 8)
 shape = SubResource("RectangleShape2D_wruke")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Layer0/TileMapLayer3"]
+position = Vector2(438, 161)
+sprite_frames = SubResource("SpriteFrames_alkg7")
+autoplay = "default"
+frame_progress = 0.250187
+script = ExtResource("12_k578b")
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="Layer0"]
 tile_map_data = PackedByteArray("AAAOABgAAAADABkAAAAPABgAAAAEABkAAAAQABgAAAAFABkAAAAgABkAAAADABkAAAAgABoAAAADABoAAAAgABsAAAADABsAAAAgABwAAAADABwAAAAgAB0AAAADAB0AAAAhABkAAAAEABkAAAAhABoAAAAEABoAAAAhABsAAAAEABsAAAAhABwAAAAEABwAAAAhAB0AAAAEAB0AAAAiABkAAAAFABkAAAAiABoAAAAFABoAAAAiABsAAAAFABsAAAAiABwAAAAFABwAAAAiAB0AAAAFAB0AAAAOABkAAAADABkAAAAOABoAAAADABoAAAAOABsAAAADABsAAAAOABwAAAADABwAAAAOAB0AAAADAB0AAAAPABkAAAAEABkAAAAPABoAAAAEABoAAAAPABsAAAAEABsAAAAPABwAAAAEABwAAAAPAB0AAAAEAB0AAAAQABkAAAAFABkAAAAQABoAAAAFABoAAAAQABsAAAAFABsAAAAQABwAAAAFABwAAAAQAB0AAAAFAB0AAAAaAA4AAAADABkAAAAaAA8AAAADABoAAAAaABAAAAADABsAAAAaABEAAAADABwAAAAaABIAAAADAB0AAAAbAA4AAAAEABkAAAAbAA8AAAAEABoAAAAbABAAAAAEABsAAAAbABEAAAAEABwAAAAbABIAAAAEAB0AAAAcAA4AAAAFABkAAAAcAA8AAAAFABoAAAAcABAAAAAFABsAAAAcABEAAAAFABwAAAAcABIAAAAFAB0AAAAyABgAAAADABkAAAAzABgAAAAEABkAAAA0ABgAAAAFABkAAAAyABkAAAADABoAAAAyABoAAAADABsAAAAyABsAAAADABwAAAAyABwAAAADAB0AAAAzABoAAAAEABsAAAAzABsAAAAEABwAAAAzABwAAAAEAB0AAAA0ABkAAAAFABoAAAA0ABoAAAAFABsAAAA0ABsAAAAFABwAAAA0ABwAAAAFAB0AAAAzABkAAAAEABoAAAAvAA4AAAAOABgAAAAtABAAAAAMABoAAAAtABEAAAAMABsAAAAtABIAAAAMABwAAAAtABMAAAAMAB0AAAAuAA8AAAANABkAAAAuABAAAAANABoAAAAuABEAAAANABsAAAAuABIAAAANABwAAAAuABMAAAANAB0AAAAvAA8AAAAOABkAAAAvABAAAAAOABoAAAAvABEAAAAOABsAAAAvABIAAAAOABwAAAAvABMAAAAOAB0AAAAEAAQAAAAJAC4AAAAEAAUAAAAJAC8AAAAEAAYAAAAJADAAAAAEAAcAAAAJADEAAAAFAAQAAAAKAC4AAAAFAAUAAAAKAC8AAAAFAAYAAAAKADAAAAAFAAcAAAAKADEAAAAGAAQAAAALAC4AAAAGAAUAAAALAC8AAAAGAAYAAAALADAAAAAGAAcAAAALADEAAAAyABQAAAAGACwAAAAyABUAAAAGAC0AAAAzABQAAAAHACwAAAAzABUAAAAHAC0AAAA0ABQAAAAIACwAAAA0ABUAAAAIAC0AAAAmABkAAAADACsAAAAmABoAAAADACwAAAAnABgAAAAEACoAAAAnABkAAAAEACsAAAAnABoAAAAEACwAAAAoABgAAAAFACoAAAAoABkAAAAFACsAAAAoABoAAAAFACwAAAA=")
