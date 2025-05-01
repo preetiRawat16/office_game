@@ -8,12 +8,12 @@ var cooldown = false  # Cooldown variable
 var dialogue_triggered = false
 var current_task = null
 var current_dialogue = null
-func _on_body_entered_lift(body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = true
 		print("Player entered interaction zone")
 
-func _on_body_exited_lift(body: Node2D) -> void:
+func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_in_range = false
 		task_triggered = false  # Reset task state when player leaves
@@ -29,7 +29,8 @@ func _process(delta: float) -> void:
 func start_task() -> void:
 	var d = dialogue_scene.instantiate()
 	var task_box = task_scene.instantiate()
-	d.setscene("act2scene1")
+	d.setscene("act3scene1")
+	
 	get_tree().root.add_child(task_box)
 	# Connect the task_ended signal to a function
 	task_box.connect("task_ended", Callable(self, "_on_task_ended"))

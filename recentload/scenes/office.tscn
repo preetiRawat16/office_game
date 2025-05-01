@@ -1,12 +1,15 @@
-[gd_scene load_steps=51 format=4 uid="uid://c7iajq1avc2np"]
+[gd_scene load_steps=57 format=4 uid="uid://c7iajq1avc2np"]
 
 [ext_resource type="Texture2D" uid="uid://d2wsn8nkvivln" path="res://use/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png" id="1_hub07"]
 [ext_resource type="Texture2D" uid="uid://c2qmqqn5a0ml3" path="res://use/Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow_48x48.png" id="2_2knxt"]
 [ext_resource type="Texture2D" uid="uid://buynrltqh4m30" path="res://characters/coworker1.png" id="3_fmddn"]
+[ext_resource type="Script" uid="uid://dpa4fu4fceasu" path="res://scenes/chatdetectionstacy.gd" id="4_fmddn"]
 [ext_resource type="Texture2D" uid="uid://dby28houm2uky" path="res://characters/coworker2.png" id="4_gdafm"]
 [ext_resource type="Texture2D" uid="uid://dprs1ty7msetb" path="res://characters/hr.png" id="5_in4ui"]
 [ext_resource type="Texture2D" uid="uid://bccckppjy6j0e" path="res://characters/accountant_new.png" id="6_6hbky"]
+[ext_resource type="Script" uid="uid://ctgg5ixg4rr5d" path="res://scenes/chatdetection_alice.gd" id="6_gdafm"]
 [ext_resource type="PackedScene" uid="uid://jk7m62vo2l10" path="res://scenes/new_worker.tscn" id="7_2knxt"]
+[ext_resource type="Script" uid="uid://dqa2vndbx0u70" path="res://scenes/area_2d.gd" id="10_in4ui"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
 texture = ExtResource("1_hub07")
@@ -14827,6 +14830,10 @@ animations = [{
 radius = 18.0
 height = 72.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmddn"]
+radius = 49.0
+height = 108.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_m8tx5"]
 atlas = ExtResource("4_gdafm")
 region = Rect2(0, 0, 48, 96)
@@ -14876,6 +14883,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_in4ui"]
+radius = 33.0
+height = 94.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lcnwv"]
 texture = ExtResource("2_2knxt")
@@ -24131,6 +24142,9 @@ size = Vector2(716, 75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdafm"]
 size = Vector2(24, 35)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hbky"]
+size = Vector2(140, 112)
+
 [node name="Office" type="Node2D"]
 
 [node name="Layer0" type="TileMap" parent="."]
@@ -24159,6 +24173,12 @@ frame_progress = 0.692589
 position = Vector2(-2, 7)
 shape = SubResource("CapsuleShape2D_2knxt")
 
+[node name="chatdetection" type="Area2D" parent="Layer0/TileMapLayer2/coworker1"]
+script = ExtResource("4_fmddn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer2/coworker1/chatdetection"]
+shape = SubResource("CapsuleShape2D_fmddn")
+
 [node name="coworker2" type="AnimatedSprite2D" parent="Layer0/TileMapLayer2"]
 position = Vector2(993, 181)
 sprite_frames = SubResource("SpriteFrames_ga26y")
@@ -24170,6 +24190,13 @@ frame_progress = 0.0697248
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer2/coworker2/StaticBody2D"]
 position = Vector2(-1, 18)
 shape = SubResource("CapsuleShape2D_2knxt")
+
+[node name="chatdetectionAlice" type="Area2D" parent="Layer0/TileMapLayer2/coworker2"]
+script = ExtResource("6_gdafm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer2/coworker2/chatdetectionAlice"]
+position = Vector2(-1, 12)
+shape = SubResource("CapsuleShape2D_in4ui")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="Layer0"]
 tile_map_data = PackedByteArray("AAAXAAkAAAAnAF4AAAAMABgAAAAWAFAAAAAMABkAAAAWAFEAAAAMABoAAAAWAFIAAAANABgAAAAXAFAAAAANABkAAAAXAFEAAAANABoAAAAXAFIAAAAOABcAAAAYAE8AAAAOABgAAAAYAFAAAAAOABkAAAAYAFEAAAAOABoAAAAYAFIAAAAPABcAAAAZAE8AAAAPABgAAAAZAFAAAAAPABkAAAAZAFEAAAAPABoAAAAZAFIAAAAQABYAAAAaAE4AAAAQABcAAAAaAE8AAAAQABgAAAAaAFAAAAAQABkAAAAaAFEAAAAQABoAAAAaAFIAAAARABYAAAAbAE4AAAARABcAAAAbAE8AAAARABgAAAAbAFAAAAARABkAAAAbAFEAAAARABoAAAAbAFIAAAASABYAAAAcAE4AAAASABcAAAAcAE8AAAASABgAAAAcAFAAAAASABkAAAAcAFEAAAASABoAAAAcAFIAAAAXAAsAAAAeAFoAAAAXAAwAAAAeAFsAAAAXAA0AAAAeAFwAAAAXAA4AAAAeAF0AAAAYAAsAAAAfAFoAAAAYAAwAAAAfAFsAAAAYAA0AAAAfAFwAAAAYAA4AAAAfAF0AAAAZAAsAAAAgAFoAAAAZAAwAAAAgAFsAAAAZAA0AAAAgAFwAAAAZAA4AAAAgAF0AAAAZAA8AAAAgAF4AAAAaAAsAAAAhAFoAAAAaAAwAAAAhAFsAAAAaAA0AAAAhAFwAAAAaAA4AAAAhAF0AAAAaAA8AAAAhAF4AAAAbAAwAAAAiAFsAAAAbAA0AAAAiAFwAAAAbAA4AAAAiAF0AAAAbAA8AAAAiAF4AAAAcAAwAAAAjAFsAAAAcAA0AAAAjAFwAAAAcAA4AAAAjAF0AAAAcAA8AAAAjAF4AAAAdAAwAAAAkAFsAAAAdAA0AAAAkAFwAAAAdAA4AAAAkAF0AAAAdAA8AAAAkAF4AAAAeAAwAAAAlAFsAAAAeAA0AAAAlAFwAAAAeAA4AAAAlAF0AAAAeAA8AAAAlAF4AAAAxAA4AAAAvAFcAAAAmABQAAAAnAF4AAAAmABUAAAAnAF8AAAAnABQAAAAoAF4AAAAnABUAAAAoAF8AAAAoABQAAAApAF4AAAAoABUAAAApAF8AAAApABQAAAAqAF4AAAApABUAAAAqAF8AAAAqABQAAAArAF4AAAAqABUAAAArAF8AAAArABQAAAAsAF4AAAArABUAAAAsAF8AAAAsABQAAAAtAF4AAAAsABUAAAAtAF8AAAAtABQAAAAuAF4AAAAtABUAAAAuAF8AAAApAAsAAAAnACcAAAApAAwAAAAnACgAAAApAA0AAAAnACkAAAAqAAsAAAAoACcAAAAqAAwAAAAoACgAAAAqAA0AAAAoACkAAAArAAsAAAApACcAAAArAAwAAAApACgAAAArAA0AAAApACkAAAAsAAsAAAAqACcAAAAsAAwAAAAqACgAAAAsAA0AAAAqACkAAAAsAA4AAAAqACoAAAAsAA8AAAAqACsAAAAtAAsAAAArACcAAAAtAAwAAAArACgAAAAtAA0AAAArACkAAAAtAA4AAAArACoAAAAtAA8AAAArACsAAAAuAAsAAAAsACcAAAAuAAwAAAAsACgAAAAuAA0AAAAsACkAAAAuAA4AAAAsACoAAAAuAA8AAAAsACsAAAAvAAsAAAAtACcAAAAvAAwAAAAtACgAAAAvAA0AAAAtACkAAAAwAAsAAAAuACcAAAAwAAwAAAAuACgAAAAwAA0AAAAuACkAAAAxAAsAAAAvACcAAAAxAAwAAAAvACgAAAAxAA0AAAAvACkAAAAgAAkAAAAnAF4AAAAgAAoAAAAnAF8AAAAhAAkAAAAoAF4AAAAhAAoAAAAoAF8AAAAiAAkAAAApAF4AAAAiAAoAAAApAF8AAAAjAAkAAAAqAF4AAAAjAAoAAAAqAF8AAAAkAAkAAAArAF4AAAAkAAoAAAArAF8AAAAlAAkAAAAsAF4AAAAlAAoAAAAsAF8AAAAmAAkAAAAtAF4AAAAmAAoAAAAtAF8AAAAnAAkAAAAuAF4AAAAnAAoAAAAuAF8AAAAdABYAAAAeAE4AAAAeABYAAAAfAE4AAAAfABYAAAAgAE4AAAAgABYAAAAhAE4AAAAhABYAAAAiAE4AAAAiABYAAAAjAE4AAAAdABcAAAAeAE8AAAAdABgAAAAeAFAAAAAdABkAAAAeAFEAAAAdABoAAAAeAFIAAAAeABcAAAAfAE8AAAAeABgAAAAfAFAAAAAeABkAAAAfAFEAAAAeABoAAAAfAFIAAAAfABcAAAAgAE8AAAAfABgAAAAgAFAAAAAfABkAAAAgAFEAAAAfABoAAAAgAFIAAAAgABcAAAAhAE8AAAAgABgAAAAhAFAAAAAgABkAAAAhAFEAAAAgABoAAAAhAFIAAAAhABcAAAAiAE8AAAAhABgAAAAiAFAAAAAhABkAAAAiAFEAAAAhABoAAAAiAFIAAAAiABcAAAAjAE8AAAAiABgAAAAjAFAAAAAiABkAAAAjAFEAAAAiABoAAAAjAFIAAAAjABcAAAAkAE8AAAAjABgAAAAkAFAAAAAjABkAAAAkAFEAAAAjABoAAAAkAFIAAAAkABgAAAAlAFAAAAAkABkAAAAlAFEAAAAkABoAAAAlAFIAAAAvABYAAAAeAGAAAAAwABYAAAAfAGAAAAAxABYAAAAgAGAAAAAyABYAAAAhAGAAAAAvABcAAAAeAGEAAAAvABgAAAAeAGIAAAAvABkAAAAeAGMAAAAwABcAAAAfAGEAAAAwABgAAAAfAGIAAAAwABkAAAAfAGMAAAAxABcAAAAgAGEAAAAxABgAAAAgAGIAAAAxABkAAAAgAGMAAAAxABoAAAAgAGQAAAAyABcAAAAhAGEAAAAyABgAAAAhAGIAAAAyABkAAAAhAGMAAAAyABoAAAAhAGQAAAAzABcAAAAiAGEAAAAzABgAAAAiAGIAAAAzABkAAAAiAGMAAAAzABoAAAAiAGQAAAA0ABcAAAAjAGEAAAA0ABgAAAAjAGIAAAA0ABkAAAAjAGMAAAA0ABoAAAAjAGQAAAA1ABcAAAAkAGEAAAA1ABgAAAAkAGIAAAA1ABkAAAAkAGMAAAA1ABoAAAAkAGQAAAA2ABcAAAAlAGEAAAA2ABgAAAAlAGIAAAA2ABkAAAAlAGMAAAA2ABoAAAAlAGQAAAAOAAkAAAAnAGEAAAAOAAoAAAAnAGIAAAAPAAkAAAAoAGEAAAAPAAoAAAAoAGIAAAAQAAkAAAApAGEAAAAQAAoAAAApAGIAAAARAAkAAAAqAGEAAAARAAoAAAAqAGIAAAASAAkAAAArAGEAAAASAAoAAAArAGIAAAATAAkAAAAsAGEAAAATAAoAAAAsAGIAAAAUAAkAAAAtAGEAAAAUAAoAAAAtAGIAAAAVAAgAAAAuAGAAAAAVAAkAAAAuAGEAAAAVAAoAAAAuAGIAAAAqAAkAAAAeABYAAAAqAAoAAAAeABcAAAArAAkAAAAfABYAAAArAAoAAAAfABcAAAAsAAkAAAAgABYAAAAsAAoAAAAgABcAAAAtAAkAAAAhABYAAAAtAAoAAAAhABcAAAAuAAkAAAAiABYAAAAuAAoAAAAiABcAAAAvAAkAAAAjABYAAAAvAAoAAAAjABcAAAA=")
@@ -24221,3 +24248,17 @@ shape = SubResource("RectangleShape2D_2knxt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(920, 592)
 shape = SubResource("RectangleShape2D_gdafm")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("10_in4ui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(432, 191)
+shape = SubResource("RectangleShape2D_6hbky")
+
+[connection signal="body_entered" from="Layer0/TileMapLayer2/coworker1/chatdetection" to="Layer0/TileMapLayer2/coworker1/chatdetection" method="_on_body_entered"]
+[connection signal="body_exited" from="Layer0/TileMapLayer2/coworker1/chatdetection" to="Layer0/TileMapLayer2/coworker1/chatdetection" method="_on_body_exited"]
+[connection signal="body_entered" from="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" to="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" method="_on_body_entered"]
+[connection signal="body_exited" from="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" to="Layer0/TileMapLayer2/coworker2/chatdetectionAlice" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

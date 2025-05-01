@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3hshtv0n8rub"
-path="res://.godot/imported/Manager_img.png-62e0ef758bf42c7a469ddac3d4c7544f.ctex"
+uid="uid://cr41jpx74ubcl"
+path="res://.godot/imported/Stacy_img.png-3cabd1010863962d77d6bef72cc4bd40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/character_img/Manager_img.png"
-dest_files=["res://.godot/imported/Manager_img.png-62e0ef758bf42c7a469ddac3d4c7544f.ctex"]
+source_file="res://characters/character_img/Stacy_img.png"
+dest_files=["res://.godot/imported/Stacy_img.png-3cabd1010863962d77d6bef72cc4bd40.ctex"]
 
 [params]
 

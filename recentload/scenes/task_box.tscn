@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cl4lgh7dqruox"]
 
 [ext_resource type="Texture2D" uid="uid://cxmcbpkval2sd" path="res://use/action_box.png" id="1_vhhpj"]
-[ext_resource type="Script" uid="uid://cme2cvdqxyiwj" path="res://task_box.gd" id="1_vwcjl"]
-[ext_resource type="Script" uid="uid://jwxlsfm8j0op" path="res://scenes/button.gd" id="3_4j21r"]
-[ext_resource type="Script" uid="uid://bml2uj1bddvnn" path="res://scenes/button_2.gd" id="4_4es6u"]
+[ext_resource type="Script" path="res://task_box.gd" id="1_vwcjl"]
+[ext_resource type="Script" path="res://scenes/button.gd" id="3_4j21r"]
+[ext_resource type="Script" path="res://scenes/button_2.gd" id="4_4es6u"]
 
 [node name="task_box" type="Control"]
 layout_mode = 3
