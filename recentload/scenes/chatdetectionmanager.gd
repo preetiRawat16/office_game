@@ -38,5 +38,10 @@ func _on_dialogue_ended():
 	await get_tree().create_timer(0.5).timeout
 	dialogue_triggered = false
 	cooldown = false
-	if Global.sceneChange != "act1scene1":
-		Global.sceneChange= "clickupstarts"
+
+	if Global.sceneChange == "game1ends":
+		Global.sceneChange = "act2scene1"
+	elif Global.sceneChange != "act1scene1" and Global.sceneChange == "act3scene1":
+		Global.sceneChange = "clickupstarts"
+	elif Global.sceneChange == "finalscene":
+		get_tree().change_scene_to_file("res://scenes/gameFinished.tscn")

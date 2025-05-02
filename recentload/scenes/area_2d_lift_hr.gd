@@ -30,7 +30,7 @@ func start_task() -> void:
 	
 	var task_box = task_scene.instantiate()
 	#print(Global.sceneChange)
-	Global.sceneChange = "act2scene1"
+	
 	#print(Global.sceneChange)
 	get_tree().root.add_child(task_box)
 	# Connect the task_ended signal to a function

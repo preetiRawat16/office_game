@@ -29,7 +29,7 @@ func start_dialogue():
 	var dialogue = dialogue_scene.instantiate()
 	get_tree().root.add_child(dialogue)
 	print(dialogue.current_scene)
-	if Global.sceneChange != "act1scene1":
+	if Global.sceneChange == "act2scene1":
 		Global.sceneChange = "act3scene1"
 	print(dialogue.current_scene)
 	dialogue.current_scene = Global.sceneChange  # Ensure correct scene is set

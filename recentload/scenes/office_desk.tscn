@@ -1,23 +1,23 @@
-[gd_scene load_steps=72 format=4 uid="uid://c7iajq1avc2np"]
+[gd_scene load_steps=72 format=4 uid="uid://ccfho2oa8e66w"]
 
-[ext_resource type="Texture2D" uid="uid://d2wsn8nkvivln" path="res://use/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png" id="1_hub07"]
-[ext_resource type="Texture2D" uid="uid://c2qmqqn5a0ml3" path="res://use/Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow_48x48.png" id="2_2knxt"]
-[ext_resource type="Texture2D" uid="uid://buynrltqh4m30" path="res://characters/coworker1.png" id="3_fmddn"]
-[ext_resource type="Script" uid="uid://dpa4fu4fceasu" path="res://scenes/chatdetectionstacy.gd" id="4_fmddn"]
-[ext_resource type="Texture2D" uid="uid://dby28houm2uky" path="res://characters/coworker2.png" id="4_gdafm"]
-[ext_resource type="Texture2D" uid="uid://dprs1ty7msetb" path="res://characters/hr.png" id="5_in4ui"]
-[ext_resource type="Texture2D" uid="uid://bccckppjy6j0e" path="res://characters/accountant_new.png" id="6_6hbky"]
-[ext_resource type="Script" uid="uid://ctgg5ixg4rr5d" path="res://scenes/chatdetection_alice.gd" id="6_gdafm"]
-[ext_resource type="PackedScene" uid="uid://jk7m62vo2l10" path="res://scenes/new_worker.tscn" id="7_2knxt"]
-[ext_resource type="Script" uid="uid://b4upi3shboiik" path="res://scenes/chatdetectionmanager.gd" id="8_o23kw"]
-[ext_resource type="Script" uid="uid://dqa2vndbx0u70" path="res://scenes/area_2d.gd" id="10_in4ui"]
-[ext_resource type="Script" uid="uid://b81ps42b4v7g3" path="res://scenes/chatdetection_mark.gd" id="10_wruke"]
-[ext_resource type="Script" uid="uid://c42v4qwgccj03" path="res://scenes/liftforofficescene.gd" id="11_6hbky"]
-[ext_resource type="Texture2D" uid="uid://dmii3a4a41ccj" path="res://use/emailsprite.png" id="11_ujkv6"]
-[ext_resource type="Script" uid="uid://bmaa82ljstfdm" path="res://scenes/animated_sprite_2d_2.gd" id="12_k578b"]
+[ext_resource type="Texture2D" uid="uid://d2wsn8nkvivln" path="res://use/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png" id="1_ibjiq"]
+[ext_resource type="Texture2D" uid="uid://c2qmqqn5a0ml3" path="res://use/Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow_48x48.png" id="2_jhrp5"]
+[ext_resource type="Texture2D" uid="uid://buynrltqh4m30" path="res://characters/coworker1.png" id="3_jrvd6"]
+[ext_resource type="Script" uid="uid://dpa4fu4fceasu" path="res://scenes/chatdetectionstacy.gd" id="4_m0v8m"]
+[ext_resource type="Texture2D" uid="uid://dby28houm2uky" path="res://characters/coworker2.png" id="5_kk6ua"]
+[ext_resource type="Script" uid="uid://ctgg5ixg4rr5d" path="res://scenes/chatdetection_alice.gd" id="6_hsv34"]
+[ext_resource type="Texture2D" uid="uid://dprs1ty7msetb" path="res://characters/hr.png" id="7_4pq2b"]
+[ext_resource type="Script" uid="uid://b4upi3shboiik" path="res://scenes/chatdetectionmanager.gd" id="8_dtya0"]
+[ext_resource type="Texture2D" uid="uid://bccckppjy6j0e" path="res://characters/accountant_new.png" id="9_h7ng0"]
+[ext_resource type="Script" uid="uid://b81ps42b4v7g3" path="res://scenes/chatdetection_mark.gd" id="10_owcjf"]
+[ext_resource type="Texture2D" uid="uid://dmii3a4a41ccj" path="res://use/emailsprite.png" id="11_hh85j"]
+[ext_resource type="Script" uid="uid://bmaa82ljstfdm" path="res://scenes/animated_sprite_2d_2.gd" id="12_svr4l"]
+[ext_resource type="PackedScene" uid="uid://jk7m62vo2l10" path="res://scenes/new_worker.tscn" id="13_v7007"]
+[ext_resource type="Script" uid="uid://cwoku7qjpm0km" path="res://scenes/deskcollisiondesk.gd" id="14_ibjiq"]
+[ext_resource type="Script" uid="uid://c42v4qwgccj03" path="res://scenes/liftforofficescene.gd" id="15_j7ee8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
-texture = ExtResource("1_hub07")
+texture = ExtResource("1_ibjiq")
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
@@ -1376,7 +1376,7 @@ texture = ExtResource("1_hub07")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8nhc"]
-texture = ExtResource("2_2knxt")
+texture = ExtResource("2_jhrp5")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -5957,7 +5957,7 @@ sources/0 = SubResource("TileSetAtlasSource_ei2s5")
 sources/1 = SubResource("TileSetAtlasSource_u8nhc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43ocd"]
-texture = ExtResource("2_2knxt")
+texture = ExtResource("2_jhrp5")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -10311,7 +10311,7 @@ tile_size = Vector2i(16, 13)
 sources/0 = SubResource("TileSetAtlasSource_43ocd")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hsito"]
-texture = ExtResource("2_2knxt")
+texture = ExtResource("2_jhrp5")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -14782,27 +14782,27 @@ tile_size = Vector2i(16, 13)
 sources/0 = SubResource("TileSetAtlasSource_hsito")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3xqf3"]
-atlas = ExtResource("3_fmddn")
+atlas = ExtResource("3_jrvd6")
 region = Rect2(864, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70x1r"]
-atlas = ExtResource("3_fmddn")
+atlas = ExtResource("3_jrvd6")
 region = Rect2(912, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_knsl5"]
-atlas = ExtResource("3_fmddn")
+atlas = ExtResource("3_jrvd6")
 region = Rect2(960, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s0aar"]
-atlas = ExtResource("3_fmddn")
+atlas = ExtResource("3_jrvd6")
 region = Rect2(1008, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxl1f"]
-atlas = ExtResource("3_fmddn")
+atlas = ExtResource("3_jrvd6")
 region = Rect2(1056, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2uxut"]
-atlas = ExtResource("3_fmddn")
+atlas = ExtResource("3_jrvd6")
 region = Rect2(1104, 0, 48, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n1y4y"]
@@ -14840,27 +14840,27 @@ radius = 49.0
 height = 108.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m8tx5"]
-atlas = ExtResource("4_gdafm")
+atlas = ExtResource("5_kk6ua")
 region = Rect2(0, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4hetp"]
-atlas = ExtResource("4_gdafm")
+atlas = ExtResource("5_kk6ua")
 region = Rect2(48, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o3cd7"]
-atlas = ExtResource("4_gdafm")
+atlas = ExtResource("5_kk6ua")
 region = Rect2(96, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qan1"]
-atlas = ExtResource("4_gdafm")
+atlas = ExtResource("5_kk6ua")
 region = Rect2(144, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jktts"]
-atlas = ExtResource("4_gdafm")
+atlas = ExtResource("5_kk6ua")
 region = Rect2(192, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_25m5p"]
-atlas = ExtResource("4_gdafm")
+atlas = ExtResource("5_kk6ua")
 region = Rect2(240, 0, 48, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ga26y"]
@@ -14894,7 +14894,7 @@ radius = 33.0
 height = 94.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lcnwv"]
-texture = ExtResource("2_2knxt")
+texture = ExtResource("2_jhrp5")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -19473,27 +19473,27 @@ tile_size = Vector2i(16, 13)
 sources/0 = SubResource("TileSetAtlasSource_lcnwv")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2k2f6"]
-atlas = ExtResource("5_in4ui")
+atlas = ExtResource("7_4pq2b")
 region = Rect2(816, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hs4kw"]
-atlas = ExtResource("5_in4ui")
+atlas = ExtResource("7_4pq2b")
 region = Rect2(768, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bm8iy"]
-atlas = ExtResource("5_in4ui")
+atlas = ExtResource("7_4pq2b")
 region = Rect2(720, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2uru3"]
-atlas = ExtResource("5_in4ui")
+atlas = ExtResource("7_4pq2b")
 region = Rect2(672, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ekubs"]
-atlas = ExtResource("5_in4ui")
+atlas = ExtResource("7_4pq2b")
 region = Rect2(624, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hblr6"]
-atlas = ExtResource("5_in4ui")
+atlas = ExtResource("7_4pq2b")
 region = Rect2(576, 0, 48, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_46so7"]
@@ -19526,27 +19526,27 @@ animations = [{
 radius = 86.8332
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bveom"]
-atlas = ExtResource("6_6hbky")
+atlas = ExtResource("9_h7ng0")
 region = Rect2(528, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6jtqa"]
-atlas = ExtResource("6_6hbky")
+atlas = ExtResource("9_h7ng0")
 region = Rect2(480, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nl0r1"]
-atlas = ExtResource("6_6hbky")
+atlas = ExtResource("9_h7ng0")
 region = Rect2(432, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_26ul0"]
-atlas = ExtResource("6_6hbky")
+atlas = ExtResource("9_h7ng0")
 region = Rect2(384, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5bs7n"]
-atlas = ExtResource("6_6hbky")
+atlas = ExtResource("9_h7ng0")
 region = Rect2(336, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cu40l"]
-atlas = ExtResource("6_6hbky")
+atlas = ExtResource("9_h7ng0")
 region = Rect2(288, 0, 48, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qt548"]
@@ -19579,27 +19579,27 @@ animations = [{
 size = Vector2(116, 102)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k578b"]
-atlas = ExtResource("11_ujkv6")
+atlas = ExtResource("11_hh85j")
 region = Rect2(0, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_07d2k"]
-atlas = ExtResource("11_ujkv6")
+atlas = ExtResource("11_hh85j")
 region = Rect2(48, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gnmmx"]
-atlas = ExtResource("11_ujkv6")
+atlas = ExtResource("11_hh85j")
 region = Rect2(96, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jp1e5"]
-atlas = ExtResource("11_ujkv6")
+atlas = ExtResource("11_hh85j")
 region = Rect2(144, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kviqm"]
-atlas = ExtResource("11_ujkv6")
+atlas = ExtResource("11_hh85j")
 region = Rect2(192, 0, 48, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ja80a"]
-atlas = ExtResource("11_ujkv6")
+atlas = ExtResource("11_hh85j")
 region = Rect2(0, 96, 48, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_alkg7"]
@@ -19629,7 +19629,7 @@ animations = [{
 }]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i814"]
-texture = ExtResource("2_2knxt")
+texture = ExtResource("2_jhrp5")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -24238,8 +24238,7 @@ position = Vector2(-2, 7)
 shape = SubResource("CapsuleShape2D_2knxt")
 
 [node name="chatdetection" type="Area2D" parent="Layer0/TileMapLayer2/coworker1"]
-position = Vector2(0, 2)
-script = ExtResource("4_fmddn")
+script = ExtResource("4_m0v8m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer2/coworker1/chatdetection"]
 shape = SubResource("CapsuleShape2D_fmddn")
@@ -24257,7 +24256,7 @@ position = Vector2(-1, 18)
 shape = SubResource("CapsuleShape2D_2knxt")
 
 [node name="chatdetectionAlice" type="Area2D" parent="Layer0/TileMapLayer2/coworker2"]
-script = ExtResource("6_gdafm")
+script = ExtResource("6_hsv34")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer2/coworker2/chatdetectionAlice"]
 position = Vector2(-1, 12)
@@ -24274,7 +24273,7 @@ autoplay = "default"
 frame_progress = 0.710938
 
 [node name="chatdetectionmanager" type="Area2D" parent="Layer0/TileMapLayer3/HR"]
-script = ExtResource("8_o23kw")
+script = ExtResource("8_dtya0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer3/HR/chatdetectionmanager"]
 position = Vector2(-45, 35)
@@ -24287,7 +24286,7 @@ autoplay = "default"
 frame_progress = 0.904581
 
 [node name="chatdetectionMark" type="Area2D" parent="Layer0/TileMapLayer3/AnimatedSprite2D"]
-script = ExtResource("10_wruke")
+script = ExtResource("10_owcjf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark"]
 position = Vector2(25, 8)
@@ -24298,7 +24297,7 @@ position = Vector2(438, 161)
 sprite_frames = SubResource("SpriteFrames_alkg7")
 autoplay = "default"
 frame_progress = 0.250187
-script = ExtResource("12_k578b")
+script = ExtResource("12_svr4l")
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="Layer0"]
 tile_map_data = PackedByteArray("AAAOABgAAAADABkAAAAPABgAAAAEABkAAAAQABgAAAAFABkAAAAgABkAAAADABkAAAAgABoAAAADABoAAAAgABsAAAADABsAAAAgABwAAAADABwAAAAgAB0AAAADAB0AAAAhABkAAAAEABkAAAAhABoAAAAEABoAAAAhABsAAAAEABsAAAAhABwAAAAEABwAAAAhAB0AAAAEAB0AAAAiABkAAAAFABkAAAAiABoAAAAFABoAAAAiABsAAAAFABsAAAAiABwAAAAFABwAAAAiAB0AAAAFAB0AAAAOABkAAAADABkAAAAOABoAAAADABoAAAAOABsAAAADABsAAAAOABwAAAADABwAAAAOAB0AAAADAB0AAAAPABkAAAAEABkAAAAPABoAAAAEABoAAAAPABsAAAAEABsAAAAPABwAAAAEABwAAAAPAB0AAAAEAB0AAAAQABkAAAAFABkAAAAQABoAAAAFABoAAAAQABsAAAAFABsAAAAQABwAAAAFABwAAAAQAB0AAAAFAB0AAAAaAA4AAAADABkAAAAaAA8AAAADABoAAAAaABAAAAADABsAAAAaABEAAAADABwAAAAaABIAAAADAB0AAAAbAA4AAAAEABkAAAAbAA8AAAAEABoAAAAbABAAAAAEABsAAAAbABEAAAAEABwAAAAbABIAAAAEAB0AAAAcAA4AAAAFABkAAAAcAA8AAAAFABoAAAAcABAAAAAFABsAAAAcABEAAAAFABwAAAAcABIAAAAFAB0AAAAyABgAAAADABkAAAAzABgAAAAEABkAAAA0ABgAAAAFABkAAAAyABkAAAADABoAAAAyABoAAAADABsAAAAyABsAAAADABwAAAAyABwAAAADAB0AAAAzABoAAAAEABsAAAAzABsAAAAEABwAAAAzABwAAAAEAB0AAAA0ABkAAAAFABoAAAA0ABoAAAAFABsAAAA0ABsAAAAFABwAAAA0ABwAAAAFAB0AAAAzABkAAAAEABoAAAAvAA4AAAAOABgAAAAtABAAAAAMABoAAAAtABEAAAAMABsAAAAtABIAAAAMABwAAAAtABMAAAAMAB0AAAAuAA8AAAANABkAAAAuABAAAAANABoAAAAuABEAAAANABsAAAAuABIAAAANABwAAAAuABMAAAANAB0AAAAvAA8AAAAOABkAAAAvABAAAAAOABoAAAAvABEAAAAOABsAAAAvABIAAAAOABwAAAAvABMAAAAOAB0AAAAEAAQAAAAJAC4AAAAEAAUAAAAJAC8AAAAEAAYAAAAJADAAAAAEAAcAAAAJADEAAAAFAAQAAAAKAC4AAAAFAAUAAAAKAC8AAAAFAAYAAAAKADAAAAAFAAcAAAAKADEAAAAGAAQAAAALAC4AAAAGAAUAAAALAC8AAAAGAAYAAAALADAAAAAGAAcAAAALADEAAAAyABQAAAAGACwAAAAyABUAAAAGAC0AAAAzABQAAAAHACwAAAAzABUAAAAHAC0AAAA0ABQAAAAIACwAAAA0ABUAAAAIAC0AAAAmABkAAAADACsAAAAmABoAAAADACwAAAAnABgAAAAEACoAAAAnABkAAAAEACsAAAAnABoAAAAEACwAAAAoABgAAAAFACoAAAAoABkAAAAFACsAAAAoABoAAAAFACwAAAA=")
@@ -24310,8 +24309,8 @@ tile_set = SubResource("TileSet_wruqr")
 position = Vector2(1056.5, 206)
 shape = SubResource("RectangleShape2D_fmddn")
 
-[node name="Player" parent="." instance=ExtResource("7_2knxt")]
-position = Vector2(-704, -410)
+[node name="Player" parent="." instance=ExtResource("13_v7007")]
+position = Vector2(-473, -377)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -24335,15 +24334,15 @@ shape = SubResource("RectangleShape2D_2knxt")
 position = Vector2(920, 592)
 shape = SubResource("RectangleShape2D_gdafm")
 
-[node name="deskcollision" type="Area2D" parent="."]
-script = ExtResource("10_in4ui")
+[node name="deskcollisiondesk" type="Area2D" parent="."]
+script = ExtResource("14_ibjiq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="deskcollision"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deskcollisiondesk"]
 position = Vector2(432, 191)
 shape = SubResource("RectangleShape2D_6hbky")
 
 [node name="liftforofficescene" type="Area2D" parent="."]
-script = ExtResource("11_6hbky")
+script = ExtResource("15_j7ee8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="liftforofficescene"]
 position = Vector2(7, 180)
@@ -24357,7 +24356,7 @@ shape = SubResource("RectangleShape2D_o23kw")
 [connection signal="body_exited" from="Layer0/TileMapLayer3/HR/chatdetectionmanager" to="Layer0/TileMapLayer3/HR/chatdetectionmanager" method="_on_body_exited"]
 [connection signal="body_entered" from="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" to="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" method="_on_body_entered"]
 [connection signal="body_exited" from="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" to="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" method="_on_body_exited"]
-[connection signal="body_entered" from="deskcollision" to="deskcollision" method="_on_body_entered"]
-[connection signal="body_exited" from="deskcollision" to="deskcollision" method="_on_body_exited"]
+[connection signal="body_entered" from="deskcollisiondesk" to="deskcollisiondesk" method="_on_body_entered"]
+[connection signal="body_exited" from="deskcollisiondesk" to="deskcollisiondesk" method="_on_body_exited"]
 [connection signal="body_entered" from="liftforofficescene" to="liftforofficescene" method="_on_body_entered_lift"]
 [connection signal="body_exited" from="liftforofficescene" to="liftforofficescene" method="_on_body_exited_lift"]

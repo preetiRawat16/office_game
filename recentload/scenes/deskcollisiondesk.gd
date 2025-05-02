@@ -20,8 +20,7 @@ func _on_body_exited(body: Node2D) -> void:
 		print("Player exited interaction zone")
 
 func _process(delta: float) -> void:
-	if Global.sceneChange != "clickupstarts":
-		return 
+
 	if player_in_range and not task_triggered and not cooldown:
 		if Input.is_action_just_pressed("ui_accept"):
 			task_triggered = true
@@ -30,7 +29,7 @@ func _process(delta: float) -> void:
 
 func start_task() -> void:
 	if Global.sceneChange != "finalscene":
-		Global.sceneChange = "act3scene1"
+		Global.sceneChange = "clickupstarts"
 		
 	get_tree().change_scene_to_file("res://scenes/ClickUp.tscn") 
 	

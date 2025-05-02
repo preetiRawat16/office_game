@@ -4,8 +4,9 @@ extends Area2D
 var player_in_range = false
 var dialogue_triggered = false
 var cooldown = false
+var current_task = null
 @onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
-
+@onready var asking = preload("res://scenes/AskStacy.tscn")
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true
@@ -33,8 +34,19 @@ func start_dialogue():
 	dialogue.connect("dialogue_ended", _on_dialogue_ended)
 	dialogue.set_npc_dialogue(npc_name)  # Use the exported npc_name
 
+	
+
 func _on_dialogue_ended():
 	cooldown = true
 	await get_tree().create_timer(0.5).timeout
 	dialogue_triggered = false
 	cooldown = false
+	if Global.sceneChange == "clickupstarts":
+		var task_box = asking.instantiate()
+		get_tree().root.add_child(task_box)
+		task_box.connect("task_ended", Callable(self, "_on_task_ended"))
+		
+func _on_task_ended():
+	if current_task:
+		current_task.queue_free()
+		current_task = null
