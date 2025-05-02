@@ -1,0 +1,82 @@
+[
+  {
+	"question": "Which visual is best used to show trends over time in Power BI?",
+	"options": [
+	  "Bar Chart",
+	  "Pie Chart",
+	  "Line Chart",
+	  "Scatter Plot"
+	],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "0": "Bar charts are better for category comparison, not time-based trends. \n\n Correct Answer: \n Line Chart \n Explanation: \n Line charts are ideal for displaying trends over time.",
+	  "1": "Pie charts are for showing part-to-whole relationships, not trends.\n\n Correct Answer: \n Line Chart \n Explanation: \n Line charts are ideal for displaying trends over time.",
+	  "2": "Correct. Line charts are ideal for displaying trends over time.",
+	  "3": "Scatter plots are used for correlation between numeric variables. \n\n Correct Answer: \n Line Chart \n Explanation: \n Line charts are ideal for displaying trends over time.",
+	}
+  },
+  {
+	"question": "What is DAX in Power BI used for?",
+	"options": [
+	  "Styling visuals",
+	  "Importing data",
+	  "Writing formulas and calculations",
+	  "Creating relationships"
+	],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "0": "Styling is done via visual formatting options, not DAX. \n\n Correct Answer: \n Writing formulas and calculations \n Explanation: \n DAX is used to create measures, calculated columns, and tables.",
+	  "1": "Data import is handled by Power Query, not DAX. \n\n Correct Answer: \n Writing formulas and calculations \n Explanation: \n DAX is used to create measures, calculated columns, and tables.",
+	  "2": "Correct. DAX is used to create measures, calculated columns, and tables.",
+	  "3": "Relationships are created in the model view, not using DAX directly. \n\n Correct Answer: \n Writing formulas and calculations \n Explanation: \n DAX is used to create measures, calculated columns, and tables.",
+	}
+  },
+  {
+	"question": "Which of the following is NOT a valid data source for Power BI?",
+	"options": [
+	  "Excel",
+	  "SQL Server",
+	  "Google Drive",
+	  "Web API"
+	],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "0": "Excel is a common and supported data source. \n\n Correct Answer:\n Google Drive\n Explanation:\n Google Drive itself isn't a native data source; you need connectors or workarounds.",
+	  "1": "SQL Server is fully supported for live and import modes. \n\n Correct Answer:\n Google Drive\n Explanation:\n Google Drive itself isn't a native data source; you need connectors or workarounds.",
+	  "2": "Correct. Google Drive itself isn't a native data source; you need connectors or workarounds.",
+	  "3": "Web APIs can be used via Web or OData connectors. \n\n Correct Answer:\n Google Drive\n Explanation: \n Google Drive itself isn't a native data source; you need connectors or workarounds."
+	}
+  },
+  {
+	"question": "Which feature allows you to build reports using natural language in Power BI?",
+	"options": [
+	  "Power Query Editor",
+	  "Q&A Visual",
+	  "Smart Narrative",
+	  "Bookmarks"
+	],
+	"correctOptionIndex": 1,
+	"explanations": {
+	  "0": "Power Query is used for data transformation, not Q&A.\n\n Correct Answer: \n Q&A Visual \n Explanation: \n The Q&A visual lets users ask questions in plain language",
+	  "1": "Correct. The Q&A visual lets users ask questions in plain language.",
+	  "2": "Smart Narrative auto-generates insights but doesn't accept questions.\n\n Correct Answer: \n Q&A Visual \n Explanation: \n The Q&A visual lets users ask questions in plain language",
+	  "3": "Bookmarks are for saving view states, not querying data.\n\n Correct Answer: \n Q&A Visual \n Explanation: \n The Q&A visual lets users ask questions in plain language"
+	}
+  },
+  {
+	"question": "How do you create a calculated column in Power BI?",
+	"options": [
+	  "Use the Format panel",
+	  "Use Power Query steps",
+	  "Use DAX in Data view",
+	  "Use Filters pane"
+	],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "0": "The Format panel styles visuals, not data.\n\n Correct Answer: \n Use DAX in Data view \n Explanation: \n Calculated columns are created with DAX in the Data view.\n",
+	  "1": "Power Query creates transformed columns, not DAX-based calculated columns.\n\n Correct Answer: Use DAX in Data view \n Explanation: \n Calculated columns are created with DAX in the Data view.\n\n",
+	  "2": "Correct. Calculated columns are created with DAX in the Data view.",
+	  "3": "Filters are for interaction, not for column creation.\n\n Correct Answer: Use DAX in Data view \n Explanation: \n Calculated columns are created with DAX in the Data view.\n"
+	}
+  }
+]
