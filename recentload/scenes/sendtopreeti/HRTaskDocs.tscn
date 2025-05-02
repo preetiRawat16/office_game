@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwisdgn0gx0ec"]
+
+[ext_resource type="Script" uid="uid://cx5byxt325i4e" path="res://scenes/hr_task_docs.gd" id="1_ddmtg"]
+[ext_resource type="Texture2D" uid="uid://bmbd2predflgv" path="res://use/HRTaskBG.png" id="1_nvorm"]
+
+[node name="HrTaskDocs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ddmtg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.051
+anchor_right = 0.027
+anchor_bottom = 0.051
+offset_left = -32.104
+offset_top = -36.895
+offset_right = 1244.9
+offset_bottom = 681.105
+texture = ExtResource("1_nvorm")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.238
+anchor_top = 0.181
+anchor_right = 0.238
+anchor_bottom = 0.181
+offset_left = -86.176
+offset_top = -17.288
+offset_right = 712.824
+offset_bottom = 61.712
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Documents handover for verification"
+autowrap_mode = 3
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.237
+anchor_top = 0.423
+anchor_right = 0.237
+anchor_bottom = 0.423
+offset_left = -15.024
+offset_top = -26.104
+offset_right = 536.976
+offset_bottom = 135.896
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+select_mode = 1
+item_count = 3
+item_0/text = "Original Certificates"
+item_1/text = "Work Permit"
+item_2/text = "Old Resignation Letter"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.521
+anchor_top = 0.804
+anchor_right = 0.521
+anchor_bottom = 0.804
+offset_left = -117.192
+offset_top = -34.992
+offset_right = 117.808
+offset_bottom = 35.008
+theme_override_font_sizes/font_size = 24
+text = "Next"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.52
+anchor_top = 0.805
+anchor_right = 0.52
+anchor_bottom = 0.805
+offset_left = -117.04
+offset_top = -35.225
+offset_right = 116.96
+offset_bottom = 35.775
+theme_override_font_sizes/font_size = 24
+text = "Finish"
+
+[node name="WrongPopup" type="AcceptDialog" parent="."]
+position = Vector2i(762, 32)
+size = Vector2i(505, 105)

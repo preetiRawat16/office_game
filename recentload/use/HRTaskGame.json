@@ -1,0 +1,52 @@
+[
+  {
+	"question": "Select the document you would submit to the HR",
+	"options": ["Relieving Letter from Previous Job", "Work Permit", "Old Offer Letter(s)"],
+	"correctOptionIndex": 1,
+	"explanations": {
+	  "0": "Relieving letters are typically only required when verifying past employment — not for onboarding.",
+	  "1": "Correct. A work permit is a mandatory document that proves you're legally allowed to work.",
+	  "2": "Old offer letters are outdated and irrelevant for the current onboarding process."
+	}
+  },
+  {
+	"question": "Which of the following documents would you need to submit to the HR?",
+	"options": ["Proof of Address", "Medical Reports", "Blood Group Report"],
+	"correctOptionIndex": 0,
+	"explanations": {
+	  "0": "Correct. Proof of address is typically required for official records and background checks.",
+	  "1": "Medical reports are usually only asked for health insurance or job-specific roles, not basic onboarding.",
+	  "2": "Blood group is rarely a required document unless there's a medical need in your job."
+	}
+  },
+  {
+	"question": "Select the document you would submit to the HR",
+	"options": ["Old Pay Slips", "Passport", "Bank Details"],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "0": "Old pay slips are used during salary negotiations, not required for onboarding paperwork.",
+	  "1": "Passports may be used as ID, but not mandatory unless you're a foreign employee.",
+	  "2": "Correct. Bank details are required to set up your salary account and deposits."
+	}
+  },
+  {
+	"question": "Choose the document you would submit to the HR",
+	"options": ["Original Degree Certificates", "Copy of Degree Certificates", "10th/12th Grade Sheets"],
+	"correctOptionIndex": 1,
+	"explanations": {
+	  "0": "Originals should never be submitted — only shown for verification if asked.",
+	  "1": "Correct. Submitting a copy of your degree certificates is standard for verification.",
+	  "2": "Only the highest qualification is usually required — school mark sheets are not necessary."
+	}
+  },
+  {
+	"question": "Select one of the following documents you would submit to the HR",
+	"options": ["Social Media Links", "Personal Projects", "Signed Offer Letter"],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "0": "Social media links are optional and not part of formal onboarding documents.",
+	  "1": "Personal projects can be shared during interviews or reviews, not onboarding.",
+	  "2": "Correct. The signed offer letter is a formal confirmation of your acceptance."
+	}
+  }
+]

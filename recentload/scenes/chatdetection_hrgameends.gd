@@ -4,7 +4,9 @@ extends Area2D
 var player_in_range = false
 var dialogue_triggered = false
 var cooldown = false
+
 @onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
+var current_dialogue = null
 var hr_docs_instance = null
 
 func _on_body_entered(body):
@@ -27,44 +29,31 @@ func _process(delta):
 		start_dialogue()
 
 func start_dialogue():
-	var dialogue = dialogue_scene.instantiate()
-	get_tree().root.add_child(dialogue)
-		
-	dialogue.current_scene = Global.sceneChange  # Ensure correct scene is set
-	dialogue.connect("dialogue_ended", _on_dialogue_ended)
-	dialogue.set_npc_dialogue(npc_name) 	
-	
-	
-	
+	current_dialogue = dialogue_scene.instantiate()
+	get_tree().root.add_child(current_dialogue)
+	current_dialogue.current_scene = Global.sceneChange  # Ensure correct scene is set
+	current_dialogue.connect("dialogue_ended", _on_dialogue_ended)
+	current_dialogue.set_npc_dialogue(npc_name) 	
+
 func startgame():
-	var dialogue = dialogue_scene.instantiate()
-	var hr_docs_scene = preload("res://scenes/HRTaskDocs.tscn")  # ✅ Preload the scene
+	var hr_docs_scene = preload("res://scenes/HRTaskDocs.tscn")
 	hr_docs_instance = hr_docs_scene.instantiate()
 	get_tree().root.add_child(hr_docs_instance)
-	hr_docs_instance._ready()  # Call _ready() on the HR task docs instance (if necessary
 	hr_docs_instance.connect("quiz_finished", Callable(self, "_on_quiz_finished"))
-	dialogue.current_scene = Global.sceneChange	
-
-
-	
-	# After displaying the feedback, ensure the dialogue continues with the HR task explanation.
-	# If there's a special task or action to trigger in the HR docs, it could go here.
+	hr_docs_instance.current_scene = Global.sceneChange  # Optional if needed for quiz logic
 
 func _on_quiz_finished():
-	print("Quiz finished! Transitioning to next dialogue.")  # Point to the next JSON block
-	dialogue_triggered = true  # Allow re-triggering dialogue
+	print("Quiz finished! Transitioning to next dialogue.")
+	dialogue_triggered = false  # Allow re-triggering dialogue
 	
-	# Optionally auto-trigger new dialogue
 	if player_in_range:
 		start_dialogue()
 
-
 func _on_dialogue_ended():
 	var dialogue = dialogue_scene.instantiate()
+	dialogue_triggered = false  # Allow new dialogue again
 	cooldown = true
 	await get_tree().create_timer(0.5).timeout
-	dialogue_triggered = true
 	cooldown = false
-	startgame()
+
 		
-	

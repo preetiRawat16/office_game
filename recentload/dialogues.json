@@ -7,6 +7,18 @@
 			"If you need any help finding the department or have questions later, feel free to come back here.",
 			"Welcome aboard, and I hope your onboarding goes smoothly"
 		],
+		"Alice":[
+			"Hello! you must be new. Please head to the HR department on the first floor for your onboarding"
+		],
+		"Stacy":[
+			"Hello! you must be new. Please head to the HR department on the first floor for your onboarding"
+		],
+		"Mark":[
+			"You must be new. Please head to the HR department on the first floor for your onboarding"
+		],
+		"Manager":[
+			"Hello! you must be new. Please head to the HR department on the first floor for your onboarding"
+		],
 		"HR": [
 			"Good morning and welcome to the team! We're excited to have you with us. Before we start your day, I'll need a few documents from you."
 		],
@@ -17,10 +29,9 @@
 			"Thank you. You may now proceed to meet your coworker and manager — they are on the 2nd floor.",
 			"Your Manager will guide you through the work expectations, team responsibilities, and help you get started with your initial tasks."
 		],
-		
-		
-	},
-	"act2scene1": {
+		"receptionist":[
+			"I see you met with the HR. Please head to the 2nd floor to meet your coworker and manager"
+		],
 		"Alice":[
 			"Hi. Im alice. Im usually great with email and document writing.",
 			"If you need any help, don't hesitate to reach out"
@@ -35,12 +46,62 @@
 			"He is sitting right across me. Once you are done, we will discuss your next task."
 		],
 		"Mark":[
-			"You must be the new hire. Here is the access to your work id and softwares."
+			"..."
+		],
+		
+	},
+	
+	"act2scene1": {
+		"receptionist":[
+			"I see you met with the HR. Please head to the 2nd floor to meet your coworker and manager"
+		],
+		"HR": [
+			"Thank you. You may now proceed to meet your coworker and manager — they are on the 2nd floor.",
+			"Your Manager will guide you through the work expectations, team responsibilities, and help you get started with your initial tasks."
+		],
+		"Alice":[
+			"Hi. Im alice. Im usually great with email and document writing.",
+			"If you need any help, don't hesitate to reach out"
+		],
+		"Stacy":[
+			"Hi. Im Stacy. Im usually the one responsible for power bi.",
+			"If you need any help, let me know!"
+		],
+		"Manager":[
+			"Welcome to your first day. Im going to be your manager. Im looking forward to working with you.Lets start off with the basics.",
+			"First please go to Mark. He is the IT head and will provide you with your work email and access to company softwares",
+			"He is sitting right across me. Once you are done, we will discuss your next task."
+		],
+		"Mark":[
+			"..."
 		],
 	},
 	"act3scene1": {
 		"Mark":[
 			"You must be the new hire. Here is the access to your work id and softwares."
+		],
+		"Stacy":[
+			"Hi. Im Stacy. Im usually the one responsible for power bi.",
+			"If you need any help, let me know!"
+		],
+		"Alice":[
+			"Hi. Im alice. Im usually great with email and document writing.",
+			"If you need any help, don't hesitate to reach out"
+		],
+		"receptionist":[
+			"..."
+		],
+		"Manager":[
+			"I see you've received your email ID and software access—great job getting set up!",
+			"For your next task, head over to your Desktop and open ClickUp. It’s the tool we use to manage tasks and stay organized as a team. ",
+			"Once you're in, take a look at your checklist—you’ll find a list of tasks assigned to you. Go through them one by one and start completing what’s listed.",
+			"Since it’s your first day, don’t hesitate to reach out to your coworkers if you get stuck.",
+			"It’s part of our culture here to support one another, and asking for help is always encouraged"],
+		"HR":["..."]
+	},
+	"clickupstarts": {
+		"Mark":[
+			"..."
 		],
 		"Stacy":[
 			"How can I help you?",
@@ -49,13 +110,32 @@
 			"How can I help you?",
 		],
 		"Manager":[
-			"I see you've received your email ID and software access—great job getting set up!",
-			"For your next task, head over to your Desktop and open ClickUp. It’s the tool we use to manage tasks and stay organized as a team. ",
-			"Once you're in, take a look at your checklist—you’ll find a list of tasks assigned to you. Go through them one by one and start completing what’s listed.",
-			"Since it’s your first day, don’t hesitate to reach out to your coworkers if you get stuck.",
-			"It’s part of our culture here to support one another, and asking for help is always encouraged"],
+			"Go to your desktop and check clickup. If you want any help, ask your coworkers"
+			],
+		"receptionist":[
+			"..."
+		],
+		"HR":[
+			"..."
+		],
+		
 	},
 	"finalscene": {
+		"Alice":[
+			"Hope you had a good first day!",
+		],
+		"Stacy":[
+			"Hope you had a good first day!",
+		],
+		"Mark":[
+			"Hope you had a good first day",
+		],
+		"receptionist":[
+			"Hope you had a good first day!",
+		],
+		"HR":[
+			"Hope you had a good first day!",
+		],
 		"Manager":[
 			"I see you’ve completed everything,",
 			"I hope you’ve learnt a little about how the company works",
