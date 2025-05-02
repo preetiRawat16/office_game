@@ -4,9 +4,9 @@
 	"options": ["Relieving Letter from Previous Job", "Work Permit", "Old Offer Letter(s)"],
 	"correctOptionIndex": 1,
 	"explanations": {
-	  "0": "Relieving letters are typically only required when verifying past employment — not for onboarding.",
+	  "0": "Relieving letters are typically only required when verifying past employment — not for onboarding.\n\n Correct Option: \n Work Permit\n Explanation:\n A work permit is a mandatory document that proves you're legally allowed to work.",
 	  "1": "Correct. A work permit is a mandatory document that proves you're legally allowed to work.",
-	  "2": "Old offer letters are outdated and irrelevant for the current onboarding process."
+	  "2": "Old offer letters are outdated and irrelevant for the current onboarding process.\n\n Correct Option: \n Work Permit\n Explanation:\n A work permit is a mandatory document that proves you're legally allowed to work."
 	}
   },
   {
@@ -15,8 +15,8 @@
 	"correctOptionIndex": 0,
 	"explanations": {
 	  "0": "Correct. Proof of address is typically required for official records and background checks.",
-	  "1": "Medical reports are usually only asked for health insurance or job-specific roles, not basic onboarding.",
-	  "2": "Blood group is rarely a required document unless there's a medical need in your job."
+	  "1": "Medical reports are usually only asked for health insurance or job-specific roles, not basic onboarding.n\n\n Correct Option: \n Proof of Address\n Explanation:\n Proof of address is typically required for official records and background checks.",
+	  "2": "Blood group is rarely a required document unless there's a medical need in your job.\n\n Correct Option: \n Proof of Address\n Explanation:\n Proof of address is typically required for official records and background checks."
 	}
   },
   {
@@ -24,8 +24,8 @@
 	"options": ["Old Pay Slips", "Passport", "Bank Details"],
 	"correctOptionIndex": 2,
 	"explanations": {
-	  "0": "Old pay slips are used during salary negotiations, not required for onboarding paperwork.",
-	  "1": "Passports may be used as ID, but not mandatory unless you're a foreign employee.",
+	  "0": "Old pay slips are used during salary negotiations, not required for onboarding paperwork. \n\n Correct Option: \n Bank Details\n Explanation:\n Bank details are required to set up your salary account and deposits.",
+	  "1": "Passports may be used as ID, but not mandatory unless you're a foreign employee.\n\n Correct Option: \n Bank Details\n Explanation:\n Bank details are required to set up your salary account and deposits.",
 	  "2": "Correct. Bank details are required to set up your salary account and deposits."
 	}
   },
@@ -34,9 +34,9 @@
 	"options": ["Original Degree Certificates", "Copy of Degree Certificates", "10th/12th Grade Sheets"],
 	"correctOptionIndex": 1,
 	"explanations": {
-	  "0": "Originals should never be submitted — only shown for verification if asked.",
+	  "0": "Originals should never be submitted — only shown for verification if asked.\n\n Correct Option: \n Copy of Degree Certificates\n Explanation:\n Submitting a copy of your degree certificates is standard for verification.",
 	  "1": "Correct. Submitting a copy of your degree certificates is standard for verification.",
-	  "2": "Only the highest qualification is usually required — school mark sheets are not necessary."
+	  "2": "Only the highest qualification is usually required — school mark sheets are not necessary.\n\n Correct Option: \n Copy of Degree Certificates\n Explanation:\n Submitting a copy of your degree certificates is standard for verification."
 	}
   },
   {
@@ -44,8 +44,8 @@
 	"options": ["Social Media Links", "Personal Projects", "Signed Offer Letter"],
 	"correctOptionIndex": 2,
 	"explanations": {
-	  "0": "Social media links are optional and not part of formal onboarding documents.",
-	  "1": "Personal projects can be shared during interviews or reviews, not onboarding.",
+	  "0": "Social media links are optional and not part of formal onboarding documents.\n\n Correct Option: \n Signed Offer Letter\n Explanation:\n The signed offer letter is a formal confirmation of your acceptance.",
+	  "1": "Personal projects can be shared during interviews or reviews, not onboarding.\n\n Correct Option: \n Signed Offer Letter\n Explanation:\n The signed offer letter is a formal confirmation of your acceptance.",
 	  "2": "Correct. The signed offer letter is a formal confirmation of your acceptance."
 	}
   }
