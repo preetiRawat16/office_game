@@ -4,8 +4,10 @@ extends Area2D
 var player_in_range = false
 var dialogue_triggered = false
 var cooldown = false
-@onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
+var current_task = null
 
+@onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
+@onready var game = preload("res://scenes/HRTaskDocs.tscn")
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true
@@ -31,13 +33,21 @@ func start_dialogue():
 	dialogue.current_scene = Global.sceneChange  # Ensure correct scene is set
 	dialogue.connect("dialogue_ended", _on_dialogue_ended)
 	dialogue.set_npc_dialogue(npc_name) 
-	startgame()
+
 	
-func startgame():
-	Global.sceneChange = "game1ends" # Use the exported npc_name
+ # Use the exported npc_name
 
 func _on_dialogue_ended():
 	cooldown = true
 	await get_tree().create_timer(0.5).timeout
 	dialogue_triggered = false
 	cooldown = false
+	if Global.sceneChange == "act1scene1":
+		var task_box = game.instantiate()
+		get_tree().root.add_child(task_box)
+		task_box.connect("task_ended", Callable(self, "_on_task_ended"))
+
+func _on_task_ended():
+	if current_task:
+		current_task.queue_free()
+		current_task = null

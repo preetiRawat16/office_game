@@ -29,9 +29,7 @@ func _process(delta: float) -> void:
 func start_task() -> void:
 	
 	var task_box = task_scene.instantiate()
-	#print(Global.sceneChange)
-	
-	#print(Global.sceneChange)
+
 	get_tree().root.add_child(task_box)
 	# Connect the task_ended signal to a function
 	task_box.connect("task_ended", Callable(self, "_on_task_ended"))
