@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqie24fpde3t1"]
+
+[ext_resource type="FontFile" uid="uid://cbn2muve8lcmf" path="res://Fonts/PlayfairDisplay-SemiBold.ttf" id="1_k8jdn"]
+
+[node name="InputHistory" type="Label"]
+custom_minimum_size = Vector2(500, 100)
+theme_override_colors/font_color = Color(0.597176, 0.597176, 0.597176, 1)
+theme_override_fonts/font = ExtResource("1_k8jdn")
+theme_override_font_sizes/font_size = 28
+text = " > This is what the user typed"
+autowrap_mode = 3

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://budbnpaj86kfr"]
+
+[ext_resource type="Script" uid="uid://b2bewjhoriu4m" path="res://input_response.gd" id="1_6q7cv"]
+[ext_resource type="PackedScene" uid="uid://bqie24fpde3t1" path="res://input_history.tscn" id="2_enmmk"]
+[ext_resource type="PackedScene" uid="uid://b3023gw5bg7s4" path="res://response.tscn" id="3_gy0eu"]
+
+[node name="InputResponse" type="VBoxContainer"]
+script = ExtResource("1_6q7cv")
+
+[node name="InputHistory" parent="." instance=ExtResource("2_enmmk")]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+
+[node name="Response" parent="." instance=ExtResource("3_gy0eu")]
+layout_mode = 2
