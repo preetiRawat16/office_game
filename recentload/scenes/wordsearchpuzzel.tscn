@@ -1,0 +1,140 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5aj8ueeghw1m"]
+
+[ext_resource type="Script" uid="uid://brykehxncr0r4" path="res://scenes/wordsearchpuzzel.gd" id="1_pdxtt"]
+[ext_resource type="Texture2D" uid="uid://vhy3rmdi8c2i" path="res://use/c785da0d610d9b860663f829a005c0f9.jpg" id="2_05imx"]
+
+[node name="Wordsearchpuzzel" type="Node2D"]
+script = ExtResource("1_pdxtt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 1062.0
+offset_bottom = 601.0
+texture = ExtResource("2_05imx")
+expand_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 136.0
+offset_top = 102.0
+offset_right = 490.0
+offset_bottom = 532.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 760.0
+offset_top = 41.0
+offset_right = 1032.0
+offset_bottom = 115.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "QUESTIONS"
+
+[node name="question1" type="Label" parent="."]
+offset_left = 656.0
+offset_top = 73.0
+offset_right = 1051.0
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Which keyword helps you find values within a certain range? "
+autowrap_mode = 3
+
+[node name="question2" type="Label" parent="."]
+offset_left = 658.0
+offset_top = 146.0
+offset_right = 1054.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Which keyword allows you to match values using wildcards? "
+autowrap_mode = 3
+
+[node name="question3" type="Label" parent="."]
+offset_left = 658.0
+offset_top = 221.0
+offset_right = 1048.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "What keyword can you use to check if a column’s value exists within a set of values? "
+autowrap_mode = 3
+
+[node name="question4" type="Label" parent="."]
+offset_left = 663.0
+offset_top = 300.0
+offset_right = 1050.0
+offset_bottom = 375.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "What keyword combines rows from two or more tables based on a related column?"
+autowrap_mode = 3
+
+[node name="question5" type="Label" parent="."]
+offset_left = 660.0
+offset_top = 385.0
+offset_right = 1055.0
+offset_bottom = 478.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "A _________ key uniquely identifies each record in a table, making it easy to retrieve, update, or delete specific data."
+autowrap_mode = 3
+
+[node name="question6" type="Label" parent="."]
+offset_left = 660.0
+offset_top = 461.0
+offset_right = 1055.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " A ________ key connects two tables by linking a record in one table to a record in another, helping maintain data integrity and enforce relationships."
+autowrap_mode = 3
+
+[node name="answer6" type="Label" parent="."]
+offset_left = 678.0
+offset_top = 461.0
+offset_right = 777.0
+offset_bottom = 491.0
+theme_override_colors/font_color = Color(0, 0.619608, 0.313726, 1)
+text = "foreign"
+autowrap_mode = 3
+
+[node name="answer1" type="Label" parent="."]
+offset_left = 660.0
+offset_top = 124.0
+offset_right = 854.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0, 0.618214, 0.314895, 1)
+text = "BETWEEN"
+
+[node name="answer2" type="Label" parent="."]
+offset_left = 665.0
+offset_top = 197.0
+offset_right = 859.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0.619608, 0.313726, 1)
+text = "LIKE"
+
+[node name="answer3" type="Label" parent="."]
+offset_left = 661.0
+offset_top = 271.0
+offset_right = 947.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0, 0.619608, 0.313726, 1)
+text = "IN"
+
+[node name="answer4" type="Label" parent="."]
+offset_left = 669.0
+offset_top = 358.0
+offset_right = 863.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0, 0.619608, 0.313726, 1)
+text = "JOIN"
+
+[node name="answer5" type="Label" parent="."]
+offset_left = 676.0
+offset_top = 385.0
+offset_right = 744.0
+offset_bottom = 408.0
+theme_override_colors/font_color = Color(0, 0.619608, 0.313726, 1)
+text = "primary"
+autowrap_mode = 3
+
+[node name="leavepuzzel" type="Button" parent="."]
+offset_left = 505.0
+offset_top = 535.0
+offset_right = 635.0
+offset_bottom = 573.0
+text = "Exit"

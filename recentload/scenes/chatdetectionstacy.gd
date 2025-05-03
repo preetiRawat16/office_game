@@ -7,6 +7,7 @@ var cooldown = false
 var current_task = null
 @onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
 @onready var asking = preload("res://scenes/AskStacy.tscn")
+@onready var wordpuzzel_scene  = preload("res://scenes/wordsearchpuzzel.tscn")
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true
@@ -42,9 +43,9 @@ func _on_dialogue_ended():
 	dialogue_triggered = false
 	cooldown = false
 	if Global.sceneChange == "clickupstarts":
-		var task_box = asking.instantiate()
-		get_tree().root.add_child(task_box)
-		task_box.connect("task_ended", Callable(self, "_on_task_ended"))
+		Global.meetStacy = true
+		var puzzel_instance = wordpuzzel_scene.instantiate()
+		get_tree().current_scene.add_child(puzzel_instance)
 		
 func _on_task_ended():
 	if current_task:
