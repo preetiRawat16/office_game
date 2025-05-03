@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3fnwo034rf3w"]
+
+[ext_resource type="Script" uid="uid://ctamglaspf22m" path="res://stacy_task_1.gd" id="1_j4pfj"]
+[ext_resource type="Texture2D" uid="uid://bqr0ny83vrllg" path="res://WhitetaskBG.jpg" id="2_j4pfj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsrk0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ed3jr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a52qa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wlpqv"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2e2r1"]
+
+[sub_resource type="Theme" id="Theme_10riu"]
+ItemList/styles/cursor = null
+ItemList/styles/cursor_unfocused = SubResource("StyleBoxFlat_fsrk0")
+ItemList/styles/focus = SubResource("StyleBoxTexture_ed3jr")
+ItemList/styles/hovered = SubResource("StyleBoxEmpty_a52qa")
+ItemList/styles/hovered_selected = SubResource("StyleBoxTexture_wlpqv")
+ItemList/styles/hovered_selected_focus = SubResource("StyleBoxLine_2e2r1")
+
+[node name="StacyTask1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4pfj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.469
+anchor_right = 0.5
+anchor_bottom = 0.469
+offset_left = -576.0
+offset_top = -303.912
+offset_right = 577.0
+offset_bottom = 344.088
+texture = ExtResource("2_j4pfj")
+
+[node name="StacyLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 24.0
+offset_right = 1124.0
+offset_bottom = 237.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+autowrap_mode = 3
+
+[node name="StacyNextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.904
+anchor_right = 0.513
+anchor_bottom = 0.904
+offset_left = -130.976
+offset_top = 0.207947
+offset_right = 84.024
+offset_bottom = 57.2079
+theme_override_font_sizes/font_size = 20
+text = "Next"
+
+[node name="StacySubmitButton2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.904
+anchor_right = 0.5
+anchor_bottom = 0.904
+offset_left = -121.0
+offset_top = -1.79205
+offset_right = 97.0
+offset_bottom = 54.2079
+theme_override_font_sizes/font_size = 20
+text = "Finish"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.246
+anchor_top = 0.44
+anchor_right = 0.246
+anchor_bottom = 0.44
+offset_left = -97.392
+offset_top = 3.87997
+offset_right = 715.608
+offset_bottom = 272.88
+theme = SubResource("Theme_10riu")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+item_count = 4
+item_0/text = "Item1"
+item_1/text = "Item2"
+item_2/text = "Item3"
+item_3/text = "Item4"
+
+[node name="WrongAnsStacy" type="AcceptDialog" parent="."]

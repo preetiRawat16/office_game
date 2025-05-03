@@ -1,0 +1,82 @@
+[
+  {
+	"question": "Your coworker hasn’t responded to multiple emails about a shared task. Which sentence would best convey polite frustration without being overtly confrontational?",
+	"options": [
+	  "Just checking if you’ve had a chance to look at my previous emails.",
+	  "I guess you’re too busy to respond, as usual.",
+	  "Please respond. This is getting really frustrating.",
+	  "I wanted to follow up again in case my messages have slipped through."
+	],
+	"correctOptionIndex": 3,
+	"explanations": {
+	  "0": "This is polite but lacks the subtle assertiveness that reflects passive-aggressive tone.\n\nCorrect Answer: I wanted to follow up again in case my messages have slipped through.\nExplanation: This maintains a professional tone while subtly signaling repeated attempts.",
+	  "1": "Too informal and openly sarcastic, which is inappropriate for professional emails.\n\nCorrect Answer: I wanted to follow up again in case my messages have slipped through.\nExplanation: Passive-aggressive tones should be more subtle and respectful.",
+	  "2": "Too direct and confrontational; this may escalate tension.\n\nCorrect Answer: I wanted to follow up again in case my messages have slipped through.\nExplanation: A professional email should remain composed while expressing urgency.",
+	  "3": "Correct. It’s a tactful way to express repeated follow-ups while avoiding direct blame."
+	}
+  },
+  {
+	"question": "You're requesting a deadline extension from your manager. Which sentence is most appropriate in a formal email?",
+	"options": [
+	  "Hey, can I get a few more days on that task?",
+	  "Any chance you can push the deadline a bit?",
+	  "Would it be possible to request a short extension on the deadline due to unforeseen delays?",
+	  "Sorry, but I won’t be able to make it by the deadline."
+	],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "0": "Too casual and lacks context.\n\nCorrect Answer: Would it be possible to request a short extension on the deadline due to unforeseen delays?\nExplanation: This maintains formality, provides reason, and respectfully makes the request.",
+	  "1": "This lacks formality and context.\n\nCorrect Answer: Would it be possible to request a short extension on the deadline due to unforeseen delays?\nExplanation: Proper professional tone is key when addressing a manager.",
+	  "2": "Correct. It is formal, polite, and provides a clear reason.",
+	  "3": "This is too blunt and implies a lack of responsibility.\n\nCorrect Answer: Would it be possible to request a short extension on the deadline due to unforeseen delays?\nExplanation: A well-phrased request shows professionalism and accountability."
+	}
+  },
+  {
+	"question": "You're declining an invitation to a team-building event. What’s the best way to decline politely while maintaining rapport?",
+	"options": [
+	  "No thanks, I don’t enjoy these things.",
+	  "I’ll pass. Not my scene.",
+	  "Thanks for the invite! Unfortunately, I have prior commitments and won’t be able to attend.",
+	  "I’m busy, maybe next time."
+	],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "0": "Too dismissive and might offend the organizer.\n\nCorrect Answer: Thanks for the invite! Unfortunately, I have prior commitments and won’t be able to attend.\nExplanation: This keeps the tone warm while respectfully declining.",
+	  "1": "Too casual and potentially dismissive.\n\nCorrect Answer: Thanks for the invite! Unfortunately, I have prior commitments and won’t be able to attend.\nExplanation: Softening the decline maintains professionalism.",
+	  "2": "Correct. It’s polite, professional, and doesn’t imply dislike.",
+	  "3": "While not rude, it lacks appreciation for the invite.\n\nCorrect Answer: Thanks for the invite! Unfortunately, I have prior commitments and won’t be able to attend.\nExplanation: A courteous opening and respectful tone go a long way."
+	}
+  },
+  {
+	"question": "You're reminding your colleague for the third time to send you a document. Which line balances professionalism with subtle urgency?",
+	"options": [
+	  "Can you send it now? I've asked twice already.",
+	  "As mentioned in my previous messages, I’m still awaiting the document.",
+	  "Hello??? Still waiting on that doc.",
+	  "I hope you haven’t forgotten, could you kindly share the document at your earliest convenience?"
+	],
+	"correctOptionIndex": 3,
+	"explanations": {
+	  "0": "Too confrontational and accusatory.\n\nCorrect Answer: I hope you haven’t forgotten — could you kindly share the document at your earliest convenience?\nExplanation: It’s gently assertive without being rude.",
+	  "1": "Reasonable, but may sound slightly cold and repetitive.\n\nCorrect Answer: I hope you haven’t forgotten — could you kindly share the document at your earliest convenience?\nExplanation: This phrasing is more engaging and polite.",
+	  "2": "Unprofessional and sarcastic.\n\nCorrect Answer: I hope you haven’t forgotten — could you kindly share the document at your earliest convenience?\nExplanation: Even in repeated follow-ups, a professional tone is essential.",
+	  "3": "Correct. It expresses urgency while remaining respectful and polished."
+	}
+  },
+  {
+	"question": "You're asking a client for feedback after a completed project. Which line is most suitable in a professional setting?",
+	"options": [
+	  "Hope everything was good! Let me know what you think.",
+	  "Kindly share your thoughts on the project when convenient.",
+	  "Do you have any comments? We’re waiting.",
+	  "Hey, feedback time! Hit me up with your views."
+	],
+	"correctOptionIndex": 1,
+	"explanations": {
+	  "0": "Too casual for client communication.\n\nCorrect Answer: Kindly share your thoughts on the project when convenient.\nExplanation: This phrasing is respectful, non-intrusive, and maintains formality.",
+	  "1": "Correct. It’s polite, professional, and allows the client flexibility.",
+	  "2": "Sounds demanding and unprofessional.\n\nCorrect Answer: Kindly share your thoughts on the project when convenient.\nExplanation: Being courteous increases chances of positive engagement.",
+	  "3": "Highly informal and inappropriate for client communication.\n\nCorrect Answer: Kindly share your thoughts on the project when convenient.\nExplanation: Proper tone builds client trust and rapport."
+	}
+  }
+]
