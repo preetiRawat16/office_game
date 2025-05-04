@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtnojvu1gsb3k"]
+
+[ext_resource type="Script" uid="uid://7ddv2d3xcebg" path="res://scenes/sql_test_game.gd" id="1_jndix"]
+[ext_resource type="Script" uid="uid://i545ci05jqbf" path="res://scenes/command_processor.gd" id="2_wblxu"]
+[ext_resource type="FontFile" uid="uid://cu0innmwdnk6r" path="res://Fonts/PlayfairDisplay-SemiBold.ttf" id="3_y22ec"]
+[ext_resource type="FontFile" uid="uid://h7xhacchr1c7" path="res://Fonts/PlayfairDisplay-Regular.ttf" id="4_ckp3u"]
+[ext_resource type="Script" uid="uid://537yc8wxda2k" path="res://scenes/input.gd" id="5_fcos6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bl4w8"]
+bg_color = Color(0.0383481, 0.0353987, 0.0897714, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c7kh"]
+bg_color = Color(0.151615, 0.158976, 0.172569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ew51a"]
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bl4w8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bcl6"]
+bg_color = Color(0.0250929, 0.00850911, 0.14327, 1)
+
+[sub_resource type="Theme" id="Theme_yql3v"]
+Button/styles/disabled = SubResource("StyleBoxFlat_2bcl6")
+
+[node name="sqlTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jndix")
+
+[node name="CommandProcessor" type="Node" parent="."]
+script = ExtResource("2_wblxu")
+
+[node name="Background" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bl4w8")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Rows" type="VBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="GameInfo" type="PanelContainer" parent="Background/MarginContainer/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3c7kh")
+
+[node name="Scroll" type="ScrollContainer" parent="Background/MarginContainer/Rows/GameInfo"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="HistoryRows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ew51a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/Rows/InputArea"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Caret" type="Label" parent="Background/MarginContainer/Rows/InputArea/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_y22ec")
+theme_override_font_sizes/font_size = 28
+text = "  > "
+
+[node name="Input" type="LineEdit" parent="Background/MarginContainer/Rows/InputArea/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_ckp3u")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bl4w8")
+max_length = 60
+script = ExtResource("5_fcos6")
+
+[node name="FinishButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 469.0
+offset_top = 550.0
+offset_right = 1581.0
+offset_bottom = 1158.0
+scale = Vector2(0.204337, 0.118815)
+theme = SubResource("Theme_yql3v")
+theme_override_fonts/font = ExtResource("3_y22ec")
+theme_override_font_sizes/font_size = 150
+text = "Finish"
+
+[connection signal="text_submitted" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]

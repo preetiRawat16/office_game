@@ -1,0 +1,98 @@
+[
+  {
+	"question": "  Choose the best way to greet a client post-meeting:",
+	"options": [
+	  "To [Client's Name],",
+	  "Hello [Client's Name],",
+	  "Good afternoon,",
+	  "Dear [Client's Name],"
+	],
+	"correctOptionIndex": 3,
+	"explanations": {
+	  "1": "Too informal for a professional follow-up email.",
+	  "2": "Lacks personalization and formality.",
+	  "3": "Correct. A formal and respectful greeting.",
+	  "0": "Incorrect format; sounds awkward."
+	}
+  },
+  {
+	"question": "  Which opening sounds most appropriate and professional?",
+	"options": [
+	  "It was good to finally catch up with you.",
+	  "We appreciate you joining us for the meeting.",
+	  "Thank you for taking the time to meet with us earlier today.",
+	  "Thanks again for making the meeting work."
+	],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "1": "Less formal and polished than the first option.",
+	  "2": "Correct. It conveys gratitude with professionalism.",
+	  "3": "Lacks clarity and polish.",
+	  "0": "Too casual for professional communication."
+	}
+  },
+  {
+	"question": "  Pick the sentence that communicates the attachments effectively:",
+	"options": [
+	  "We’ve included the materials discussed, per your request.",
+	  "Attached are the documents you requested during the meeting.",
+	  "Please see the attached notes and documents as agreed.",
+	  "As discussed, please find attached the meeting notes and additional documents you requested."
+	],
+	"correctOptionIndex": 3,
+	"explanations": {
+	  "1": "Correct, but less comprehensive than the first.",
+	  "2": "Slightly vague and generic.",
+	  "3": "Correct. It's formal, precise, and clear.",
+	  "0": "Too casual in phrasing."
+	}
+  },
+  {
+	"question": "  Which of these requests the client's materials with subtle urgency?",
+	"options": [
+	  "We hope to receive the materials from your side soon so we can continue.",
+	  "We trust you'll be able to share the required materials at your earliest convenience, as this will significantly influence our progress.",
+	  "Let us know when you can send over your files.",
+	  "We await the items from your end to proceed."
+	],
+	"correctOptionIndex": 1,
+	"explanations": {
+	  "1": "Correct. Balanced and subtly assertive.",
+	  "2": "Too casual.",
+	  "3": "Sounds like a demand.",
+	  "0": "Polite but lacks urgency."
+	}
+  },
+  {
+	"question": "  Choose a closing that maintains formality while nudging urgency:",
+	"options": [
+	  "Looking forward to your prompt response.",
+	  "Hoping to hear back from you shortly.",
+	  "Please get back to us as soon as possible.",
+	  "Let us know if there are any delays from your end."
+	],
+	"correctOptionIndex": 0,
+	"explanations": {
+	  "1": "Less formal and somewhat passive.",
+	  "2": "Too direct and pushy.",
+	  "3": "Focuses on delays rather than response.",
+	  "0": "Correct. It's formal and encouraging."
+	}
+  },
+  {
+	"question": "  Select the most professional way to sign off:",
+	"options": [
+	  "Kind regards,\n [Your name]",
+	  "Sincerely,\n [Your name]",
+	  "Best regards,\n [Your name]",
+	  "Respectfully yours,\n [Your name]"
+	],
+	"correctOptionIndex": 2,
+	"explanations": {
+	  "1": "Acceptable but slightly more distant.",
+	  "2": "Correct. Widely accepted and balanced in tone.",
+	  "3": "Overly formal in most business cases.",
+	  "0": "Friendly, but less standard in corporate communication."
+	}
+  }
+]

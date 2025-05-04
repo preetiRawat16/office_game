@@ -1,0 +1,38 @@
+[
+  {
+	"type": "text",
+	"question": "SELECT * FROM customers WHERE city __________ ('London', 'Berlin', 'Madrid');",
+	"answer": "IN"
+  },
+  {
+	"type": "text",
+	"question": "SELECT * FROM users WHERE email __________ '%@gmail.com';",
+	"answer": "LIKE"
+  },
+  {
+	"type": "mcq",
+	"question": "Write a query to select all products from the products table where the price is between 100 and 200.\nA) SELECT * FROM products WHERE price IN (100, 200);\nB) SELECT * FROM products WHERE price BETWEEN 100 AND 200;\nC) SELECT * FROM products WHERE price >= 100 AND price <= 200;\nD) SELECT * FROM products WHERE price = 100 AND price = 200;",
+	"answer": "B"
+  },
+  {
+	"type": "mcq",
+  	"question": "Write a SQL query to retrieve order_id, customer_name, and email from orders and customers tables using a JOIN on customer_id.",
+  	"answer": "SELECT order_id, customer_name, email FROM orders JOIN customers ON orders.customer_id = customers.customer_id;"
+	},
+
+  {
+	"type": "text",
+	"question": "Which column should be the primary key in the customers table?\nColumns: customer_id, customer_name, email",
+	"answer": "customer_id"
+  },
+  {
+	"type": "text",
+	"question": "Which column should be the primary key in the orders table?\nColumns: order_id, order_date, customer_id",
+	"answer": "order_id"
+  },
+  {
+	"type": "text",
+	"question": "Which column should be the foreign key in the orders table linking to the customers table?",
+	"answer": "customer_id"
+  }
+]
