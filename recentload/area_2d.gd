@@ -6,6 +6,7 @@ var dialogue_triggered = false
 var cooldown = false
 @onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
 
+
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true

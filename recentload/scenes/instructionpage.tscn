@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhn4op7i4th56"]
+
+[ext_resource type="Script" uid="uid://bfwv12v86mt7e" path="res://scenes/instructionpage.gd" id="1_aytff"]
+[ext_resource type="Texture2D" uid="uid://bqnx2t0qbaufo" path="res://use/updownleftright.png" id="1_ylvpc"]
+[ext_resource type="Texture2D" uid="uid://038i4yt3jot" path="res://use/enter.png" id="2_aytff"]
+[ext_resource type="Texture2D" uid="uid://bq7rrv5jstss" path="res://use/mouse.png" id="3_6qi4u"]
+
+[node name="Instructionpage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aytff")
+
+[node name="PanelContainer" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 242.0
+offset_top = -10.0
+offset_right = 914.0
+offset_bottom = 394.0
+
+[node name="Label2" type="Label" parent="PanelContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.628
+anchor_top = 0.178
+anchor_right = 0.628
+anchor_bottom = 0.178
+offset_left = -67.016
+offset_top = -2.912
+offset_right = 192.984
+offset_bottom = 56.088
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Move Player"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PanelContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.641
+anchor_top = 0.323
+anchor_right = 0.641
+anchor_bottom = 0.323
+offset_left = -61.752
+offset_top = 32.508
+offset_right = 200.248
+offset_bottom = 91.508
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Interact with objects and npcs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="PanelContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.64
+anchor_top = 0.461
+anchor_right = 0.64
+anchor_bottom = 0.461
+offset_left = -62.08
+offset_top = 65.756
+offset_right = 199.92
+offset_bottom = 124.756
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Interact with buttons"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(137.75, 97.25)
+scale = Vector2(1.012, 0.789157)
+texture = ExtResource("1_ylvpc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(142, 200)
+scale = Vector2(1.012, 0.789157)
+texture = ExtResource("2_aytff")
+
+[node name="Sprite2D3" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(142, 284)
+scale = Vector2(0.0918672, 0.0693594)
+texture = ExtResource("3_6qi4u")
+
+[node name="goback" type="Button" parent="."]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 307.0
+offset_right = 627.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Go Back"

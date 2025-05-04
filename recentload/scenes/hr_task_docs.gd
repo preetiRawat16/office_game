@@ -3,15 +3,17 @@ extends Control
 @onready var DisplayText = $Label
 @onready var ListItem = $ItemList
 @onready var SubmitButton = $Button
-@onready var FinishButton = $Button2  # You’ll use signal for this
-@onready var WrongPopup = $WrongPopup  # AcceptDialog for explanations
+@onready var FinishButton = $Button2
+@onready var WrongPopup = $WrongPopup
+
 signal task_ended
+
 var quiz_data: Array = []
 var current_question_index: int = 0
 var player_answers: Array = []
 var wrong_answer_feedbacks: Array = []
 var next_after_popup: bool = false
-var is_final_question: bool = false  # Flag for the final question
+var is_final_question: bool = false
 
 func _ready():
 	load_quiz_data()
@@ -23,8 +25,8 @@ func _ready():
 
 	SubmitButton.pressed.connect(_on_submit_pressed)
 	WrongPopup.confirmed.connect(_on_wrong_popup_closed)
-	FinishButton.pressed.connect(_on_finish_pressed)  # Connect the FinishButton press signal
-	FinishButton.hide()  # Initially hide the FinishButton, shown only at the end
+	FinishButton.pressed.connect(_on_finish_pressed)
+	FinishButton.hide()
 
 func load_quiz_data():
 	var file_path = "res://use/HRTaskGame.json"
@@ -59,12 +61,12 @@ func show_question():
 		var is_last = current_question_index == quiz_data.size() - 1
 		SubmitButton.visible = !is_last
 		FinishButton.visible = is_last
-		is_final_question = is_last  # Set the flag for the last question
+		is_final_question = is_last
 	else:
 		DisplayText.text = "You've completed the task!"
 		ListItem.clear()
 		SubmitButton.hide()
-		self.visible = false  # Hide the quiz background/UI
+		self.visible = false
 
 func _on_submit_pressed():
 	if ListItem.get_selected_items().size() == 0:
@@ -82,7 +84,6 @@ func _on_submit_pressed():
 		current_question_index += 1
 		show_question()
 	else:
-		# Store feedback
 		var explanation = question["explanations"].get(str(selected_index), "No explanation available.")
 		wrong_answer_feedbacks.append({
 			"question": question["question"],
@@ -90,68 +91,39 @@ func _on_submit_pressed():
 			"explanation": explanation
 		})
 
-		# Show popup with explanation before moving on
 		WrongPopup.dialog_text = "Wrong answer!\n\nExplanation:\n" + explanation
 		WrongPopup.popup_centered()
-		next_after_popup = true  # Flag to continue after popup closes
+		next_after_popup = true
 
 func _on_wrong_popup_closed():
 	if next_after_popup:
 		next_after_popup = false
 
-		# Check if we just answered the last question
 		if is_final_question:
-			# Hide or remove the quiz UI elements
-			DisplayText.hide()
-			ListItem.hide()
-			SubmitButton.hide()
-			FinishButton.hide()
-
-			DisplayText.queue_free()
-			ListItem.queue_free()
-			SubmitButton.queue_free()
-			FinishButton.queue_free()
-
-			# Scene change logic
+			# 🔥 Emit signal before destroying
+			emit_signal("task_ended")
 			Global.sceneChange = "game1ends"
 			print("Scene changed to game1ends")
-			#var next_scene = preload("res://scenes/manager_office_gameends.tscn").instantiate()
-			#get_tree().root.add_child(next_scene)
-			self.queue_free()
+
+			queue_free()
 		else:
 			current_question_index += 1
 			show_question()
 
-
-# Handle the FinishButton press for transitioning
 func _on_finish_pressed():
-	# Final question logic
 	var question = quiz_data[current_question_index]
 	var selected_index = ListItem.get_selected_items()[0]
 	var correct = question["correctOptionIndex"]
 
 	if selected_index != correct:
-		# Show popup for the wrong answer before finishing
 		var explanation = question["explanations"].get(str(selected_index), "No explanation available.")
 		WrongPopup.dialog_text = "Wrong answer!\n\nExplanation:\n" + explanation
 		WrongPopup.popup_centered()
-		next_after_popup = true  # Flag to continue after popup closes
-
+		next_after_popup = true
 	else:
-		# Hide or remove the quiz UI elements
-		DisplayText.hide()
-		ListItem.hide()
-		SubmitButton.hide()
-		FinishButton.hide()
-
-		# Optionally, free the nodes if you want to completely remove them from memory
-		DisplayText.queue_free()
-		ListItem.queue_free()
-		SubmitButton.queue_free()
-		FinishButton.queue_free()
-		# Scene change logic
+		# 🔥 Emit signal before destroying
+		emit_signal("task_ended")
 		Global.sceneChange = "game1ends"
-		
 		print("Scene changed to game1ends")
 
-		self.queue_free() 	 # This will remove the current scene or UI from the tree
+		queue_free()
