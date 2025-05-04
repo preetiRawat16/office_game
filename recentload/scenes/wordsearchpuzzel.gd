@@ -38,8 +38,33 @@ func _ready():
 	answer4.visible = false
 	btn.visible = false
 	exit_btn.pressed.connect(_on_exit_pressed)
+	
+	$q1.pressed.connect(_on_question_button_pressed.bind(1))
+	$q2.pressed.connect(_on_question_button_pressed.bind(2))
+	$q3.pressed.connect(_on_question_button_pressed.bind(3))
+	$q4.pressed.connect(_on_question_button_pressed.bind(4))
+	$q5.pressed.connect(_on_question_button_pressed.bind(5))
+	$q6.pressed.connect(_on_question_button_pressed.bind(6))
 
 
+func _on_question_button_pressed(question_number: int):
+	
+	var messages = {
+		1: "SELECT * FROM orders WHERE order_date BETWEEN '2024-01-01' AND '2024-01-31';",
+		2: "SELECT * FROM customers WHERE name LIKE 'A%';",
+		3: "SELECT * FROM products WHERE category IN ('Electronics', 'Books', 'Toys');",
+		4: "SELECT orders.id, customers.name FROM orders JOIN customers ON orders.customer_id = customers.id;",
+		5: "CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(100));",
+		6: "CREATE TABLE orders (id INT PRIMARY KEY, customer_id INT, FOREIGN KEY (customer_id) REFERENCES customers(id));"
+	
+	}
+	
+	
+	$hint.dialog_text = messages.get(question_number, "No help available for this question.")
+	
+	$hint.title = "HINT: The word is in this query"
+	
+	$hint.popup_centered()
 func update_button_visibility() -> void:
 	btn.visible = Global.a1 and Global.a2 and Global.a3 and Global.a4 and Global.a5 and Global.a6
 func generate_grid():
