@@ -85,21 +85,30 @@ func place_words():
 			attempts += 1
 			var direction = randi() % 2  # 0 = horizontal, 1 = vertical
 
-			# Choose start positions such that the word fits and is not on the last row
+			# Choose start positions such that the word fits and is not on the last column
 			var max_x = GRID_SIZE - (word.length() if direction == 0 else 1)
 			var max_y = GRID_SIZE - (word.length() if direction == 1 else 1)
 
-			# Avoid starting on the last row in any case
-			if max_y >= GRID_SIZE - 1:
-				max_y = GRID_SIZE - 2
+			# Ensure words don't start in or extend into the last column
+			max_x = min(max_x, GRID_SIZE - 2)  # -2 because -1 would be last column
 
 			var start_x = randi() % (max_x + 1)
 			var start_y = randi() % (max_y + 1)
+
+			# Additional check to prevent words from extending into last column
+			if direction == 0 and (start_x + word.length() - 1) >= GRID_SIZE - 1:
+				continue
 
 			var can_place = true
 			for i in range(word.length()):
 				var x = start_x + (i if direction == 0 else 0)
 				var y = start_y + (i if direction == 1 else 0)
+				
+				# Double check we're not in the last column
+				if x >= GRID_SIZE - 1:
+					can_place = false
+					break
+					
 				if board_data[y][x] != " ":
 					can_place = false
 					break
@@ -114,7 +123,6 @@ func place_words():
 
 		if not placed:
 			push_warning("Could not place word: %s after 100 attempts" % word)
-
 
 func fill_random_letters():
 	for y in range(GRID_SIZE):
