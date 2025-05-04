@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3023gw5bg7s4"]
+
+[ext_resource type="FontFile" uid="uid://cbn2muve8lcmf" path="res://Fonts/PlayfairDisplay-SemiBold.ttf" id="1_dmkj4"]
+
+[node name="Response" type="Label"]
+custom_minimum_size = Vector2(500, 100)
+theme_override_fonts/font = ExtResource("1_dmkj4")
+theme_override_font_sizes/font_size = 30
+text = "This is what the game will give back"
+autowrap_mode = 3
