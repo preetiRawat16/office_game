@@ -9,6 +9,8 @@ const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func _on_exit_pressed():
 	queue_free()
+	
+	
 @onready var grid = $GridContainer
 var board_data = []
 var cell_nodes = []

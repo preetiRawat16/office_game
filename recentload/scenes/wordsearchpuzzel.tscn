@@ -15,10 +15,10 @@ texture = ExtResource("2_05imx")
 expand_mode = 3
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 136.0
-offset_top = 102.0
-offset_right = 490.0
-offset_bottom = 532.0
+offset_left = 165.0
+offset_top = 106.0
+offset_right = 519.0
+offset_bottom = 536.0
 
 [node name="Label" type="Label" parent="."]
 offset_left = 762.0

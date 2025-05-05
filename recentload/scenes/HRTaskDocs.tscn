@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5acfvpq6qka4"]
+[gd_scene load_steps=4 format=3 uid="uid://c5acfvpq6qka4"]
 
 [ext_resource type="Script" uid="uid://qijpw27jfx7m" path="res://scenes/hr_task_docs.gd" id="1_ddmtg"]
 [ext_resource type="Texture2D" uid="uid://c42ra4adlkf0o" path="res://characters/askingBackground.jpg" id="2_ddmtg"]
+[ext_resource type="FontFile" uid="uid://cu0innmwdnk6r" path="res://Fonts/PlayfairDisplay-SemiBold.ttf" id="3_yh8me"]
 
 [node name="HrTaskDocs" type="Control"]
 layout_mode = 3
@@ -50,10 +51,10 @@ anchor_left = 0.499
 anchor_top = 0.51
 anchor_right = 0.499
 anchor_bottom = 0.51
-offset_left = -275.848
-offset_top = -80.95
-offset_right = 276.152
-offset_bottom = 81.05
+offset_left = -269.848
+offset_top = -86.95
+offset_right = 282.152
+offset_bottom = 75.05
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 select_mode = 1
@@ -65,31 +66,53 @@ item_2/text = "Old Resignation Letter"
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.521
-anchor_top = 0.804
-anchor_right = 0.521
-anchor_bottom = 0.804
-offset_left = -117.192
-offset_top = -34.992
-offset_right = 117.808
-offset_bottom = 35.008
+anchor_left = 0.5
+anchor_top = 0.736
+anchor_right = 0.5
+anchor_bottom = 0.736
+offset_left = -124.0
+offset_top = -34.72
+offset_right = 111.0
+offset_bottom = 35.28
 theme_override_font_sizes/font_size = 24
 text = "Next"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.52
-anchor_top = 0.805
-anchor_right = 0.52
-anchor_bottom = 0.805
-offset_left = -117.04
-offset_top = -35.225
-offset_right = 116.96
-offset_bottom = 35.775
+anchor_left = 0.5
+anchor_top = 0.74
+anchor_right = 0.5
+anchor_bottom = 0.74
+offset_left = -122.0
+offset_top = -35.3
+offset_right = 112.0
+offset_bottom = 35.7
 theme_override_font_sizes/font_size = 24
 text = "Finish"
 
 [node name="WrongPopup" type="AcceptDialog" parent="."]
 position = Vector2i(762, 32)
 size = Vector2i(505, 105)
+
+[node name="ResultLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 193.0
+offset_right = 769.0
+offset_bottom = 429.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_yh8me")
+theme_override_font_sizes/normal_font_size = 28
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 451.0
+offset_top = 439.0
+offset_right = 687.0
+offset_bottom = 511.0
+theme_override_font_sizes/font_size = 20
+text = "End"
+
+[connection signal="pressed" from="Button3" to="." method="_on_endbutton_pressed"]

@@ -5,7 +5,7 @@ var player_in_range = false
 var dialogue_triggered = false
 var cooldown = false
 var current_task = null
-
+signal load_quiz_data
 @onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
 @onready var game = preload("res://scenes/HRTaskDocs.tscn")
 func _on_body_entered(body):
@@ -45,7 +45,7 @@ func _on_dialogue_ended():
 	if Global.sceneChange == "act1scene1":
 		var task_box = game.instantiate()
 		get_tree().root.add_child(task_box)
-		task_box.connect("task_ended", Callable(self, "_on_task_ended"))
+		load_quiz_data.emit()
 
 func _on_task_ended():
 	if current_task:

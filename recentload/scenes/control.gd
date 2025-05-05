@@ -6,7 +6,7 @@ var player_answers: Array = []
 var correct_answers = 0
 var wrong_answers = 0
 
-
+@onready var exit_btn := $EndButton
 
 @onready var question_label = $QuestionLabel
 @onready var option_buttons = [
@@ -17,7 +17,13 @@ var wrong_answers = 0
 ]
 @onready var email_body = $PanelContainer/MarginContainer/VBoxContainer/EmailContent/Scroll/VBoxContainer/EmailBody
 
+
+
 func _ready():
+	
+	if exit_btn:
+		exit_btn.hide()
+		
 	load_questions()
 	# Connect once globally
 	for i in range(option_buttons.size()):
@@ -43,6 +49,10 @@ func show_question():
 		display_results()  # Call a function to display the results
 		for btn in option_buttons:
 			btn.visible = false
+			
+		if exit_btn:
+			exit_btn.show()
+			#exit_btn.pressed.connect(_on_exit_pressed, CONNECT_ONE_SHOT)
 		return
 
 	var q = questions[current_index]
@@ -93,3 +103,10 @@ func display_results():
 	email_body.text += "  Total Questions: %d\n" % total_questions
 	var score = int(float(correct_answers) / total_questions * 100)
 	email_body.text += "  Your Score: %d%%\n" % score
+
+	Global.emailtask_result = score
+	print(Global.emailtask_result)
+
+func _on_exit_pressed():
+	# Consider switching scenes or hiding the test interface instead
+	queue_free()  # Frees the whole game scene

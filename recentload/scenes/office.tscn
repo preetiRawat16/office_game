@@ -1,5 +1,6 @@
-[gd_scene load_steps=72 format=4 uid="uid://c7iajq1avc2np"]
+[gd_scene load_steps=73 format=4 uid="uid://c7iajq1avc2np"]
 
+[ext_resource type="Script" uid="uid://cvpunsh7jtlvh" path="res://scenes/office.gd" id="1_07d2k"]
 [ext_resource type="Texture2D" uid="uid://d2wsn8nkvivln" path="res://use/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png" id="1_hub07"]
 [ext_resource type="Texture2D" uid="uid://c2qmqqn5a0ml3" path="res://use/Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow_48x48.png" id="2_2knxt"]
 [ext_resource type="Texture2D" uid="uid://buynrltqh4m30" path="res://characters/coworker1.png" id="3_fmddn"]
@@ -24210,6 +24211,7 @@ size = Vector2(140, 112)
 size = Vector2(80, 213)
 
 [node name="Office" type="Node2D"]
+script = ExtResource("1_07d2k")
 
 [node name="Layer0" type="TileMap" parent="."]
 position = Vector2(1, 0)

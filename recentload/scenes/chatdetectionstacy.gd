@@ -6,8 +6,10 @@ var dialogue_triggered = false
 var cooldown = false
 var current_task = null
 @onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
-@onready var asking = preload("res://scenes/AskStacy.tscn")
-@onready var wordpuzzel_scene  = preload("res://scenes/wordsearchpuzzel.tscn")
+@onready var sqltest_scene  = preload("res://scenes/sql_test_game.tscn")
+
+
+
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true
@@ -42,12 +44,22 @@ func _on_dialogue_ended():
 	await get_tree().create_timer(0.5).timeout
 	dialogue_triggered = false
 	cooldown = false
+
 	if Global.sceneChange == "clickupstarts":
 		Global.meetStacy = true
-		var puzzel_instance = wordpuzzel_scene.instantiate()
-		get_tree().current_scene.add_child(puzzel_instance)
+		player_in_range = false  # 👈 This is important
+		$CollisionShape2D.disabled = true  # 👈 Disable interaction zone temporarily
+
+		var sqltest = sqltest_scene.instantiate()
+		#emailtest.connect("email_test_game_finished", Callable(self, "_on_task_ended"))
+		get_tree().current_scene.add_child(sqltest)
+
+		
+		
 		
 func _on_task_ended():
-	if current_task:
-		current_task.queue_free()
-		current_task = null
+	print("Test finished. Returning to main game.")
+	dialogue_triggered = false
+	cooldown = false
+	player_in_range = true
+	$CollisionShape2D.disabled = false

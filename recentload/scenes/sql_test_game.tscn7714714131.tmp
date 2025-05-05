@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtnojvu1gsb3k"]
+[gd_scene load_steps=12 format=3 uid="uid://dtnojvu1gsb3k"]
 
 [ext_resource type="Script" uid="uid://7ddv2d3xcebg" path="res://scenes/sql_test_game.gd" id="1_jndix"]
 [ext_resource type="Script" uid="uid://i545ci05jqbf" path="res://scenes/command_processor.gd" id="2_wblxu"]
@@ -17,13 +17,19 @@ bg_color = Color(0.226707, 0.226708, 0.226707, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bl4w8"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bcl6"]
+bg_color = Color(0.0250929, 0.00850911, 0.14327, 1)
+
+[sub_resource type="Theme" id="Theme_yql3v"]
+Button/styles/disabled = SubResource("StyleBoxFlat_2bcl6")
+
 [node name="sqlTest" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_right = 1.0
+offset_left = 105.0
+offset_top = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jndix")
@@ -31,24 +37,11 @@ script = ExtResource("1_jndix")
 [node name="CommandProcessor" type="Node" parent="."]
 script = ExtResource("2_wblxu")
 
-[node name="FinishButton" type="Button" parent="CommandProcessor"]
-custom_minimum_size = Vector2(100, 50)
-offset_left = 479.0
-offset_top = 548.0
-offset_right = 649.0
-offset_bottom = 628.0
-size_flags_horizontal = 4
-size_flags_vertical = 8
-text = "Finish"
-
 [node name="Background" type="PanelContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.006
-anchor_right = 0.006
-offset_left = -6.912
-offset_right = 1145.09
-offset_bottom = 648.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bl4w8")
@@ -103,6 +96,18 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_bl4w8")
 max_length = 60
 script = ExtResource("5_fcos6")
 
-[connection signal="pressed" from="CommandProcessor/FinishButton" to="CommandProcessor" method="_on_exit_pressed"]
+[node name="FinishButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 469.0
+offset_top = 550.0
+offset_right = 1581.0
+offset_bottom = 1158.0
+scale = Vector2(0.204337, 0.118815)
+theme = SubResource("Theme_yql3v")
+theme_override_fonts/font = ExtResource("3_y22ec")
+theme_override_font_sizes/font_size = 150
+text = "Finish"
+
 [connection signal="text_submitted" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
 [connection signal="text_submitted" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]
+[connection signal="pressed" from="FinishButton" to="." method="_on_finish_button_pressed"]

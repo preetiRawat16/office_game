@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="New Game Project"
-run/main_scene="uid://dtnojvu1gsb3k"
+run/main_scene="uid://dns6ybmy34f0f"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
