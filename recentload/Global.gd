@@ -16,4 +16,19 @@ var a6 = false
 var hrtask_result = 0
 var sqltask_result = 0
 var emailtask_result = 0
-var clickuptask_result = 100
+var clickuptask_result = 0
+
+var bgm_player: AudioStreamPlayer
+
+func _ready():
+	if not bgm_player:
+		bgm_player = AudioStreamPlayer.new()
+		
+		# Load the audio stream
+		var stream = load("res://sound/bg_music.ogg") as AudioStream
+		stream.loop = true  # Set the loop property on the AudioStream
+		
+		bgm_player.stream = stream
+		bgm_player.volume_db = -15
+		add_child(bgm_player)
+		bgm_player.play()  # Start playback manually

@@ -8,6 +8,7 @@ var current_task = null
 signal load_quiz_data
 @onready var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
 @onready var game = preload("res://scenes/HRTaskDocs.tscn")
+
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true
@@ -43,8 +44,11 @@ func _on_dialogue_ended():
 	dialogue_triggered = false
 	cooldown = false
 	if Global.sceneChange == "act1scene1":
+		player_in_range = false  # 👈 This is important
+		$CollisionShape2D.disabled = true
 		var task_box = game.instantiate()
 		get_tree().root.add_child(task_box)
+		
 		load_quiz_data.emit()
 
 func _on_task_ended():

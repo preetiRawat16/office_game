@@ -1,22 +1,19 @@
 {
 	"act1scene1": {
 		"receptionist": [
-			"Hello, welcome to Mocha Tech. You must be the new hire. Let me walk you through the onboarding process. First please go to the HR Deparment, located on the 1st floor.",
-			"You are to provide her with the onboarding documents.",
-			"Once you've handed those over to HR, they’ll guide you through the next steps",
-			"Welcome aboard, and I hope your onboarding goes smoothly"
+			"Hello, welcome to Mocha Tech. Since this is a test, you know where to go.",
 		],
 		"Alice":[
-			"Hello! you must be new. Please head to the HR department on the first floor for your onboarding"
+			"Since this is a test, you know where to go"
 		],
 		"Stacy":[
-			"Hello! you must be new. Please head to the HR department on the first floor for your onboarding"
+			"Since this is a test, you know where to go"
 		],
 		"Mark":[
-			"You must be new. Please head to the HR department on the first floor for your onboarding"
+			"Since this is a test, you know where to go"
 		],
 		"Manager":[
-			"Hello! you must be new. Please head to the HR department on the first floor for your onboarding"
+			"Since this is a test, you know where to go"
 		],
 		"HR": [
 			"Good morning and welcome to the team! We're excited to have you with us. Before we start your day, I'll need a few documents from you."

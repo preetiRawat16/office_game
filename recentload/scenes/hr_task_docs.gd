@@ -28,9 +28,7 @@ func _ready():
 
 	SubmitButton.pressed.connect(_on_submit_pressed)
 	FinishButton.pressed.connect(_on_finish_pressed)
-	if not EndTaskButton.pressed.is_connected(_on_endbutton_pressed):
-		EndTaskButton.pressed.connect(_on_endbutton_pressed)
-
+	EndTaskButton.pressed.connect(_on_endbutton_pressed)
 	FinishButton.hide()
 
 func load_quiz_data():
@@ -149,11 +147,9 @@ func display_results():
 	result_text += "Total Questions: %d\n" % total_questions
 	result_text += "Your Score: %d%%\n\n" % score
 
+
 	ResultButton.text = result_text
-	
-	Global.hrtask_result = score
-	print(Global.hrtask_result)
 	Global.sceneChange = "game1ends"
 
-func _on_endbutton_pressed():
+func _on_endbutton_pressed() -> void:
 	queue_free()

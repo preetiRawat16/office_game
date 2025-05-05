@@ -114,5 +114,3 @@ offset_right = 687.0
 offset_bottom = 511.0
 theme_override_font_sizes/font_size = 20
 text = "End"
-
-[connection signal="pressed" from="Button3" to="." method="_on_endbutton_pressed"]
