@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dqa2lug5n7k33" path="res://scenes/joboffer.gd" id="1_w36e2"]
 [ext_resource type="Texture2D" uid="uid://dwapfttlb4vxs" path="res://use/OfficeBuildingNew.png" id="2_w36e2"]
 [ext_resource type="Texture2D" uid="uid://sy7cuw8kxls8" path="res://use/Job Offer letter img.jpg" id="3_l1eh0"]
-[ext_resource type="Script" uid="uid://iv2vh4jlftgr" path="res://start.gd" id="4_l1eh0"]
+[ext_resource type="Script" path="res://start.gd" id="4_l1eh0"]
 [ext_resource type="Script" uid="uid://4ushyrg5md3o" path="res://scenes/help.gd" id="5_atp84"]
 [ext_resource type="Script" uid="uid://c82u5rog235dl" path="res://scenes/exit.gd" id="6_64yq4"]
 

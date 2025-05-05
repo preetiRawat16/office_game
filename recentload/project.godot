@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Mocha Tech"
 run/main_scene="uid://dns6ybmy34f0f"
 config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="uid://brvux0x1kufk2"
 
 [autoload]
 
