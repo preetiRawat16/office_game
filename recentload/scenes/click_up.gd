@@ -30,7 +30,7 @@ func _on_StacyMeet_toggled(pressed: bool) -> void:
 	if pressed and not Global.meetStacy:
 		await get_tree().process_frame
 		StacyMeet.button_pressed = false
-		show_warning("You haven't met Stacy yet!\n\nMarking a task as complete without actually finishing it can lead to confusion, missed responsibilities, and delays in project progress. At Mocha Tech, we place a strong emphasis on accountability and integrity in our workflow. Skipping steps or prematurely checking items off not only undermines the process but is also viewed as a serious concern by the team. Let’s all maintain high standards and ensure our work reflects our shared commitment to quality and reliability.")
+		show_warning("A deduction of 25 points will be applied to the result for each task that is incorrectly marked as complete.")
 	else:
 		Global.stacycheck = pressed
 	check_all_meetings()
@@ -39,7 +39,7 @@ func _on_AliceMeet_toggled(pressed: bool) -> void:
 	if pressed and not Global.meetAlice:
 		await get_tree().process_frame
 		AliceMeet.button_pressed = false
-		show_warning("You haven't met Alice yet!\n\nMarking a task as complete without actually finishing it can lead to confusion, missed responsibilities, and delays in project progress. At Mocha Tech, we place a strong emphasis on accountability and integrity in our workflow. Skipping steps or prematurely checking items off not only undermines the process but is also viewed as a serious concern by the team. Let’s all maintain high standards and ensure our work reflects our shared commitment to quality and reliability.")
+		show_warning("A deduction of 25 points will be applied to the result for each task that is incorrectly marked as complete.")
 	else:
 		Global.alicecheck = pressed
 	check_all_meetings()

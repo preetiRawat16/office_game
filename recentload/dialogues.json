@@ -31,16 +31,16 @@
 			
 		],
 		"Alice":[
-			{ "text": "Hi. Im alice. Im usually great with email and document writing.", "voice": "a1.mp3" },
+			{ "text": "Hi. I'm alice. I'm usually great with email and document writing.", "voice": "a1.mp3" },
 			{ "text": "If you need any help, don't hesitate to reach out", "voice": "a2.mp3" },
 			
 		],
 		"Stacy":[
-			{ "text": "Hi. Im Stacy. Im usually the one responsible for SQL.", "voice": "stack4.mp3" },
+			{ "text": "Hi. I'm Stacy. I'm usually the one responsible for SQL.", "voice": "stack4.mp3" },
 			{ "text": "If you need any help, let me know!", "voice": "s3.mp3" },
 		],
 		"Manager":[
-			{ "text": "Welcome to your first day. Im going to be your manager. Im looking forward to working with you.Lets start off with the basics.", "voice": "b.mp3" },
+			{ "text": "Welcome to your first day. I'm going to be your manager. I'm looking forward to working with you.Lets start off with the basics.", "voice": "b.mp3" },
 			{ "text": "First please go to Mark. He is the IT head and will provide you with your work email and access to company softwares", "voice": "c.mp3" },
 			{ "text": "He is sitting right across me. Once you are done, we will discuss your next task.", "voice": "d.mp3" },
 
@@ -61,16 +61,16 @@
 
 		],
 		"Alice":[
-			{ "text": "Hi. Im alice. Im usually great with email and document writing.", "voice": "a2a11.mp3" },
+			{ "text": "Hi. I'm alice. I'm usually great with email and document writing.", "voice": "a1.mp3" },
 			{ "text": "If you need any help, don't hesitate to reach out", "voice": "a2a12.mp3" },
 			
 		],
 		"Stacy":[
-			{ "text": "Hi. Im Stacy. Im usually the one responsible for SQL.", "voice": "stack4.mp3" },
+			{ "text": "Hi. I'm Stacy. I'm usually the one responsible for SQL.", "voice": "stack4.mp3" },
 			{ "text": "If you need any help, let me know!", "voice": "s3.mp3" },
 		],
 		"Manager":[
-			{ "text": "Welcome to your first day. Im going to be your manager. Im looking forward to working with you.Lets start off with the basics.", "voice": "b.mp3" },
+			{ "text": "Welcome to your first day. I'm going to be your manager. I'm looking forward to working with you.Lets start off with the basics.", "voice": "b.mp3" },
 			{ "text": "First please go to Mark. He is the IT head and will provide you with your work email and access to company softwares", "voice": "c.mp3" },
 			{ "text": "He is sitting right across me. Once you are done, we will discuss your next task.", "voice": "d.mp3" },
 		],
@@ -84,12 +84,12 @@
 			
 		],
 		"Stacy":[
-			{ "text": "Hi. Im Stacy. Im usually the one responsible for SQL.", "voice": "stack4.mp3" },
+			{ "text": "Hi. I'm Stacy. I'm usually the one responsible for SQL.", "voice": "stack4.mp3" },
 			{ "text": "If you need any help, let me know!", "voice": "s3.mp3" },
 							
 		],
 		"Alice":[
-			{ "text": "Hi. Im alice. Im usually great with email and document writing.", "voice": "a2a11.mp3" },
+			{ "text": "Hi. I'm alice. I'm usually great with email and document writing.", "voice": "a1.mp3" },
 			{ "text": "If you need any help, don't hesitate to reach out", "voice": "a2a12.mp3" },
 		],
 		"receptionist":[

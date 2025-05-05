@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dns6ybmy34f0f"]
+[gd_scene load_steps=10 format=3 uid="uid://dns6ybmy34f0f"]
 
 [ext_resource type="Script" uid="uid://dqa2lug5n7k33" path="res://scenes/joboffer.gd" id="1_w36e2"]
 [ext_resource type="Texture2D" uid="uid://dwapfttlb4vxs" path="res://use/OfficeBuildingNew.png" id="2_w36e2"]
 [ext_resource type="Texture2D" uid="uid://sy7cuw8kxls8" path="res://use/Job Offer letter img.jpg" id="3_l1eh0"]
 [ext_resource type="Script" path="res://start.gd" id="4_l1eh0"]
-[ext_resource type="Script" uid="uid://cdlxrccpc7lre" path="res://scenes/help.gd" id="5_atp84"]
+[ext_resource type="Script" uid="uid://4ushyrg5md3o" path="res://scenes/help.gd" id="5_atp84"]
+[ext_resource type="Script" uid="uid://ccuw6kbgqyaal" path="res://scenes/exit.gd" id="6_64yq4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atp84"]
 bg_color = Color(0.862745, 0.74902, 0.662745, 1)
@@ -95,6 +96,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_g5ius")
 text = "Exit"
+script = ExtResource("6_64yq4")
 
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Help" to="Help" method="_on_pressed"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_exit_pressed"]
