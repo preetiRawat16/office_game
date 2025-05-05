@@ -25,10 +25,10 @@ func _ready():
 		bgm_player = AudioStreamPlayer.new()
 		
 		# Load the audio stream
-		var stream = load("res://sound/bg_music.ogg") as AudioStream
+		var stream = load("res://sound/omori.ogg") as AudioStream
 		stream.loop = true  # Set the loop property on the AudioStream
 		
 		bgm_player.stream = stream
-		bgm_player.volume_db = -15
+		bgm_player.volume_db = -24
 		add_child(bgm_player)
 		bgm_player.play()  # Start playback manually

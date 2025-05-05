@@ -62,7 +62,7 @@ func process_command(input: String) -> String:
 		response_text = "✅ Correct!"
 		correct_answers += 1
 	else:
-		response_text = "❌ Incorrect. The correct answer was: " + correct_answer
+		response_text = "❌ Incorrect." 
 		wrong_answers += 1
 
 	current_question_index += 1

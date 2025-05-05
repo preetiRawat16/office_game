@@ -3,7 +3,7 @@ extends Control
 @onready var HR_Result = Global.hrtask_result
 @onready var SQL_Result = Global.sqltask_result
 @onready var EMAIL_Result = Global.emailtask_result
-
+@onready var Clickup_Result = Global.clickuptask_result
 @onready var DisplayResult = $TextureRect/RichTextLabel
 
 func _ready():
@@ -19,7 +19,12 @@ func _ready():
 	var hr = int(HR_Result)
 	var sql = int(SQL_Result)
 	var email = int(EMAIL_Result)
-	var totalscore = int((hr + sql + email) * 100 / 300)
+	var clickup = int(Clickup_Result)
+	
+	if clickup > 100:
+		clickup = 100
+	
+	var totalscore = int(((hr + sql + email) - clickup) * 100 / 300)
 	DisplayResult.text += "               Total GAM Score: %d%%\n" % totalscore
 
 

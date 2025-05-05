@@ -59,9 +59,11 @@ func check_all_meetings() -> void:
 		print(Global.sceneChange)
 
 func show_warning(message: String) -> void:
+	Global.clickuptask_result += 25
 	print(message)
 	AcceptDialogue.dialog_text = message
 	AcceptDialogue.popup_centered() # Replace with popup dialog if needed
+	
 
 func set_all_meetings_complete() -> void:
 	StacyMeet.button_pressed = true

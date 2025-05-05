@@ -150,6 +150,7 @@ func display_results():
 
 	ResultButton.text = result_text
 	Global.sceneChange = "game1ends"
+	Global.hrtask_result = score
 
 func _on_endbutton_pressed() -> void:
 	queue_free()
