@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://1qfj0f3nww3t"]
+
+[ext_resource type="Script" uid="uid://cftbfdqy4f1o1" path="res://scenes/alice_task.gd" id="1_5o31c"]
+[ext_resource type="Texture2D" uid="uid://bqr0ny83vrllg" path="res://WhitetaskBG.jpg" id="2_jvfuo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsrk0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ed3jr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a52qa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wlpqv"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2e2r1"]
+
+[sub_resource type="Theme" id="Theme_10riu"]
+ItemList/styles/cursor = null
+ItemList/styles/cursor_unfocused = SubResource("StyleBoxFlat_fsrk0")
+ItemList/styles/focus = SubResource("StyleBoxTexture_ed3jr")
+ItemList/styles/hovered = SubResource("StyleBoxEmpty_a52qa")
+ItemList/styles/hovered_selected = SubResource("StyleBoxTexture_wlpqv")
+ItemList/styles/hovered_selected_focus = SubResource("StyleBoxLine_2e2r1")
+
+[node name="AliceTask1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5o31c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.469
+anchor_right = 0.5
+anchor_bottom = 0.469
+offset_left = -576.0
+offset_top = -303.912
+offset_right = 577.0
+offset_bottom = 344.088
+texture = ExtResource("2_jvfuo")
+
+[node name="AliceLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 64.0
+offset_right = 1120.0
+offset_bottom = 277.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+autowrap_mode = 3
+
+[node name="AliceNextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.904
+anchor_right = 0.513
+anchor_bottom = 0.904
+offset_left = -137.976
+offset_top = -30.792
+offset_right = 77.024
+offset_bottom = 26.2079
+theme_override_font_sizes/font_size = 20
+text = "Next"
+
+[node name="AliceSubmitButton2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.904
+anchor_right = 0.5
+anchor_bottom = 0.904
+offset_left = -126.0
+offset_top = -29.792
+offset_right = 92.0
+offset_bottom = 26.2079
+theme_override_font_sizes/font_size = 20
+text = "Finish"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.246
+anchor_top = 0.44
+anchor_right = 0.246
+anchor_bottom = 0.44
+offset_left = -228.392
+offset_top = 57.88
+offset_right = 812.608
+offset_bottom = 232.88
+theme = SubResource("Theme_10riu")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+max_text_lines = 10
+auto_width = true
+auto_height = true
+item_count = 4
+item_0/text = "Item1"
+item_1/text = "Item2"
+item_2/text = "Item3"
+item_3/text = "Item4"
+
+[node name="WrongAnsAlice" type="AcceptDialog" parent="."]

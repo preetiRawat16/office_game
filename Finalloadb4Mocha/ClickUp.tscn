@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=3 uid="uid://n56hwyilnkui"]
+
+[ext_resource type="Script" uid="uid://xbfke6254ae2" path="res://scenes/click_up.gd" id="1_oodv6"]
+[ext_resource type="Texture2D" uid="uid://c65l1o1ir0y47" path="res://characters/ccback1.png" id="2_8q2wv"]
+[ext_resource type="Script" uid="uid://b8rm1ckfo1yf6" path="res://scenes/back_btn.gd" id="3_8q2wv"]
+
+[node name="ClickUp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oodv6")
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+position = Vector2i(0, 36)
+size = Vector2i(1000, 132)
+dialog_autowrap = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.603
+anchor_top = 0.585
+anchor_right = 0.603
+anchor_bottom = 0.585
+offset_left = -690.656
+offset_top = -379.08
+offset_right = 880.344
+offset_bottom = 426.92
+texture = ExtResource("2_8q2wv")
+
+[node name="HRMeet" type="CheckBox" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.243
+anchor_right = 0.041
+anchor_bottom = 0.243
+offset_left = -13.411
+offset_top = -14.858
+offset_right = 12.589
+offset_bottom = 14.142
+
+[node name="ITMeet" type="CheckBox" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.534
+anchor_right = 0.5
+anchor_bottom = 1.534
+offset_left = -738.5
+offset_top = -1129.79
+offset_right = -712.5
+offset_bottom = -1100.8
+
+[node name="AliceMeet" type="CheckBox" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.318
+anchor_right = 0.04
+anchor_bottom = 0.318
+offset_left = -12.16
+offset_top = -12.338
+offset_right = 11.84
+offset_bottom = 11.662
+
+[node name="StacyMeet" type="CheckBox" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.358
+anchor_right = 0.041
+anchor_bottom = 0.358
+offset_left = -12.739
+offset_top = -11.978
+offset_right = 11.261
+offset_bottom = 12.022
+
+[node name="back_btn" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 484.0
+offset_right = 610.0
+offset_bottom = 540.0
+text = "Go Back"
+script = ExtResource("3_8q2wv")
+
+[node name="finaltext" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.338
+anchor_top = 0.536
+anchor_right = 0.338
+anchor_bottom = 0.536
+offset_left = -291.998
+offset_top = -20.016
+offset_right = 344.002
+offset_bottom = 19.984
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Now That you have completed your Task. Please visit the Manager to end the day"
+
+[connection signal="pressed" from="TextureRect/back_btn" to="TextureRect/back_btn" method="_on_pressed"]
