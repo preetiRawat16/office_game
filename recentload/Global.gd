@@ -1,6 +1,6 @@
 extends Node
 
-var sceneChange = "clickupstarts"
+var sceneChange = "act1scene1"
 var meetStacy = false
 var meetAlice = false
 var hrcheck = false
