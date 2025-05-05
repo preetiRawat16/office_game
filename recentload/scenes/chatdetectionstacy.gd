@@ -43,6 +43,7 @@ func _on_dialogue_ended():
 	dialogue_triggered = false
 	cooldown = false
 	if Global.sceneChange == "clickupstarts":
+		player_in_range = false
 		Global.meetStacy = true
 		var puzzel_instance = wordpuzzel_scene.instantiate()
 		get_tree().current_scene.add_child(puzzel_instance)
@@ -51,3 +52,5 @@ func _on_task_ended():
 	if current_task:
 		current_task.queue_free()
 		current_task = null
+		
+	player_in_range = true

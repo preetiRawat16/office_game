@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://c7iajq1avc2np"]
+[gd_scene load_steps=88 format=4 uid="uid://c7iajq1avc2np"]
 
 [ext_resource type="Texture2D" uid="uid://d2wsn8nkvivln" path="res://use/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png" id="1_hub07"]
 [ext_resource type="Texture2D" uid="uid://c2qmqqn5a0ml3" path="res://use/Modern_Office_Revamped_v1.2/2_Modern_Office_Black_Shadow/Modern_Office_Black_Shadow_48x48.png" id="2_2knxt"]
@@ -15,6 +15,8 @@
 [ext_resource type="Script" uid="uid://c42v4qwgccj03" path="res://scenes/liftforofficescene.gd" id="11_6hbky"]
 [ext_resource type="Texture2D" uid="uid://dmii3a4a41ccj" path="res://use/emailsprite.png" id="11_ujkv6"]
 [ext_resource type="Script" uid="uid://bmaa82ljstfdm" path="res://scenes/animated_sprite_2d_2.gd" id="12_k578b"]
+[ext_resource type="Texture2D" uid="uid://dohcd3i3jclpj" path="res://characters/mocha.png" id="13_07d2k"]
+[ext_resource type="Script" uid="uid://vf7ab6hlopqa" path="res://scenes/mochadetection.gd" id="14_gnmmx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei2s5"]
 texture = ExtResource("1_hub07")
@@ -19628,6 +19630,101 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_alkg7"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(0, 0, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hjlj"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(144, 0, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg43x"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(288, 0, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ywr3"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(432, 0, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1nwb"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(576, 0, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwvu6"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(0, 48, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7i2nt"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(144, 48, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fw3ux"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(288, 48, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1ciw"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(432, 48, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5glt"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(576, 48, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u7yi"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(0, 96, 144, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eet0l"]
+atlas = ExtResource("13_07d2k")
+region = Rect2(144, 96, 144, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42gc7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alkg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hjlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg43x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ywr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1nwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwvu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7i2nt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fw3ux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1ciw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5glt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u7yi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eet0l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf52q"]
+size = Vector2(142.943, 108.5)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i814"]
 texture = ExtResource("2_2knxt")
 0:1/0 = 0
@@ -24300,6 +24397,23 @@ autoplay = "default"
 frame_progress = 0.250187
 script = ExtResource("12_k578b")
 
+[node name="mocha" type="AnimatedSprite2D" parent="Layer0/TileMapLayer3"]
+position = Vector2(614.5, 171)
+scale = Vector2(0.715278, 0.708333)
+sprite_frames = SubResource("SpriteFrames_42gc7")
+autoplay = "default"
+
+[node name="mochadetection" type="Area2D" parent="Layer0/TileMapLayer3/mocha"]
+script = ExtResource("14_gnmmx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/TileMapLayer3/mocha/mochadetection"]
+position = Vector2(-2.72803, 37.75)
+shape = SubResource("RectangleShape2D_gf52q")
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="Layer0/TileMapLayer3/mocha/mochadetection"]
+position = Vector2(-665.613, -172)
+scale = Vector2(1.09117, 1)
+
 [node name="TileMapLayer4" type="TileMapLayer" parent="Layer0"]
 tile_map_data = PackedByteArray("AAAOABgAAAADABkAAAAPABgAAAAEABkAAAAQABgAAAAFABkAAAAgABkAAAADABkAAAAgABoAAAADABoAAAAgABsAAAADABsAAAAgABwAAAADABwAAAAgAB0AAAADAB0AAAAhABkAAAAEABkAAAAhABoAAAAEABoAAAAhABsAAAAEABsAAAAhABwAAAAEABwAAAAhAB0AAAAEAB0AAAAiABkAAAAFABkAAAAiABoAAAAFABoAAAAiABsAAAAFABsAAAAiABwAAAAFABwAAAAiAB0AAAAFAB0AAAAOABkAAAADABkAAAAOABoAAAADABoAAAAOABsAAAADABsAAAAOABwAAAADABwAAAAOAB0AAAADAB0AAAAPABkAAAAEABkAAAAPABoAAAAEABoAAAAPABsAAAAEABsAAAAPABwAAAAEABwAAAAPAB0AAAAEAB0AAAAQABkAAAAFABkAAAAQABoAAAAFABoAAAAQABsAAAAFABsAAAAQABwAAAAFABwAAAAQAB0AAAAFAB0AAAAaAA4AAAADABkAAAAaAA8AAAADABoAAAAaABAAAAADABsAAAAaABEAAAADABwAAAAaABIAAAADAB0AAAAbAA4AAAAEABkAAAAbAA8AAAAEABoAAAAbABAAAAAEABsAAAAbABEAAAAEABwAAAAbABIAAAAEAB0AAAAcAA4AAAAFABkAAAAcAA8AAAAFABoAAAAcABAAAAAFABsAAAAcABEAAAAFABwAAAAcABIAAAAFAB0AAAAyABgAAAADABkAAAAzABgAAAAEABkAAAA0ABgAAAAFABkAAAAyABkAAAADABoAAAAyABoAAAADABsAAAAyABsAAAADABwAAAAyABwAAAADAB0AAAAzABoAAAAEABsAAAAzABsAAAAEABwAAAAzABwAAAAEAB0AAAA0ABkAAAAFABoAAAA0ABoAAAAFABsAAAA0ABsAAAAFABwAAAA0ABwAAAAFAB0AAAAzABkAAAAEABoAAAAvAA4AAAAOABgAAAAtABAAAAAMABoAAAAtABEAAAAMABsAAAAtABIAAAAMABwAAAAtABMAAAAMAB0AAAAuAA8AAAANABkAAAAuABAAAAANABoAAAAuABEAAAANABsAAAAuABIAAAANABwAAAAuABMAAAANAB0AAAAvAA8AAAAOABkAAAAvABAAAAAOABoAAAAvABEAAAAOABsAAAAvABIAAAAOABwAAAAvABMAAAAOAB0AAAAEAAQAAAAJAC4AAAAEAAUAAAAJAC8AAAAEAAYAAAAJADAAAAAEAAcAAAAJADEAAAAFAAQAAAAKAC4AAAAFAAUAAAAKAC8AAAAFAAYAAAAKADAAAAAFAAcAAAAKADEAAAAGAAQAAAALAC4AAAAGAAUAAAALAC8AAAAGAAYAAAALADAAAAAGAAcAAAALADEAAAAyABQAAAAGACwAAAAyABUAAAAGAC0AAAAzABQAAAAHACwAAAAzABUAAAAHAC0AAAA0ABQAAAAIACwAAAA0ABUAAAAIAC0AAAAmABkAAAADACsAAAAmABoAAAADACwAAAAnABgAAAAEACoAAAAnABkAAAAEACsAAAAnABoAAAAEACwAAAAoABgAAAAFACoAAAAoABkAAAAFACsAAAAoABoAAAAFACwAAAA=")
 tile_set = SubResource("TileSet_wruqr")
@@ -24321,6 +24435,7 @@ polygon = PackedVector2Array(49, 4, 48, 86, 45, 149, 1, 149, 0, 233, 43, 231, 45
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+visible = false
 polygon = PackedVector2Array(219, 138, 547, 131, 562, 136, 594, 127, 607, 125, 711, 130, 716, 136, 737, 122, 748, 125, 798, 128, 802, 218, 735, 212, 763, 196, 727, 215, 723, 214, 674, 212, 507, 214, 220, 204, 486, 199, 222, 201, 415, 185, 372, 183, 215, 202)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D2"]
@@ -24357,6 +24472,8 @@ shape = SubResource("RectangleShape2D_o23kw")
 [connection signal="body_exited" from="Layer0/TileMapLayer3/HR/chatdetectionmanager" to="Layer0/TileMapLayer3/HR/chatdetectionmanager" method="_on_body_exited"]
 [connection signal="body_entered" from="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" to="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" method="_on_body_entered"]
 [connection signal="body_exited" from="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" to="Layer0/TileMapLayer3/AnimatedSprite2D/chatdetectionMark" method="_on_body_exited"]
+[connection signal="body_entered" from="Layer0/TileMapLayer3/mocha/mochadetection" to="Layer0/TileMapLayer3/mocha/mochadetection" method="_on_body_entered"]
+[connection signal="body_exited" from="Layer0/TileMapLayer3/mocha/mochadetection" to="Layer0/TileMapLayer3/mocha/mochadetection" method="_on_body_exited"]
 [connection signal="body_entered" from="deskcollision" to="deskcollision" method="_on_body_entered"]
 [connection signal="body_exited" from="deskcollision" to="deskcollision" method="_on_body_exited"]
 [connection signal="body_entered" from="liftforofficescene" to="liftforofficescene" method="_on_body_entered_lift"]

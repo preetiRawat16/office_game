@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://1qfj0f3nww3t"]
 
 [ext_resource type="Script" uid="uid://cftbfdqy4f1o1" path="res://scenes/alice_task.gd" id="1_5o31c"]
-[ext_resource type="Texture2D" uid="uid://bqr0ny83vrllg" path="res://WhitetaskBG.jpg" id="2_jvfuo"]
+[ext_resource type="Texture2D" uid="uid://vhy3rmdi8c2i" path="res://use/c785da0d610d9b860663f829a005c0f9.jpg" id="2_jvfuo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsrk0"]
 
@@ -45,10 +45,10 @@ texture = ExtResource("2_jvfuo")
 
 [node name="AliceLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 45.0
+offset_left = 111.0
 offset_top = 64.0
 offset_right = 1120.0
-offset_bottom = 277.0
+offset_bottom = 265.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -90,10 +90,10 @@ anchor_left = 0.246
 anchor_top = 0.44
 anchor_right = 0.246
 anchor_bottom = 0.44
-offset_left = -228.392
+offset_left = -185.392
 offset_top = 57.88
-offset_right = 812.608
-offset_bottom = 232.88
+offset_right = 819.608
+offset_bottom = 221.88
 theme = SubResource("Theme_10riu")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 23

@@ -42,6 +42,7 @@ func _on_dialogue_ended():
 	cooldown = false
 
 	if Global.sceneChange == "act1scene1":
+		player_in_range = false
 		current_task = game.instantiate()
 		get_tree().root.add_child(current_task)
 		current_task.connect("task_ended", Callable(self, "_on_task_ended"))
@@ -50,7 +51,7 @@ func _on_task_ended():
 	if current_task:
 		current_task.queue_free()
 		current_task = null
-	
+	player_in_range = true
 	Global.sceneChange = "game1ends"
 	
 	# Prevent re-triggering first message

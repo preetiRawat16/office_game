@@ -41,6 +41,7 @@ func _on_dialogue_ended():
 	cooldown = false
 	if Global.sceneChange == "clickupstarts":
 		Global.meetAlice = true
+		player_in_range = false
 		var task_box = game.instantiate()
 		get_tree().root.add_child(task_box)
 		task_box.connect("task_ended", Callable(self, "_on_task_ended"))
@@ -49,3 +50,5 @@ func _on_task_ended():
 	if current_task:
 		current_task.queue_free()
 		current_task = null
+	
+	player_in_range = true
