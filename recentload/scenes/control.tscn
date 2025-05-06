@@ -60,8 +60,8 @@ theme_override_colors/font_color = Color(0.230315, 0.230315, 0.230315, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_62e2m")
 theme_override_font_sizes/font_size = 21
-text = "\"We just got done with a client meeting and based on the meeting, we are sending the meeting notes and also the other documents they've requested during the meeting, furthermore, you want to emphasize them to send the required materials discussed during the meeting as soon as possible.
-structure the email such that the client knows it is urgent for them to send the required documents from their end.\" "
+text = "\"We just got done with a client meeting and based on the meeting, we are sending the meeting notes and the other documents that they've requested during the meeting; furthermore, you need to emphasize it to them to send the required materials discussed during the meeting as soon as possible.\"
+Structure the email such that the client knows it is urgent for them to send the required documents from their end."
 autowrap_mode = 3
 
 [node name="EmailBody" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/EmailContent/Scroll/VBoxContainer"]

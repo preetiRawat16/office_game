@@ -23,7 +23,7 @@ func _on_body_exited_lift(body: Node2D) -> void:
 
 func _process(delta: float) -> void:
 	if Global.sceneChange == "clickupstarts":
-		player_in_range = false
+		player_in_range = false 
 		$CollisionShape2D.disabled = true
 		
 	elif player_in_range and not task_triggered and not cooldown:
