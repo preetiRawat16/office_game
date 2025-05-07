@@ -1,7 +1,7 @@
 {
 	"act1scene1": {
 		"receptionist": [
-			"Hello, welcome to Mocha Tech. You must be the new hire. Let me walk you through the onboarding process. First please use the elevator to go to the HR Deparment, located on the 1 st floor.",
+			"Hello, welcome to Mocha Tech. You must be the new hire. Let me walk you through the onboarding process. First please use the elevator to go to the HR Deparment, located on the 1st floor.",
 			"You are to provide her with Work permit, Proof of Address, Bank Details, Copies of degrees and Signed Offer Letter.",
 			"Once you've handed those over to HR, they’ll guide you through the next steps",
 			"Welcome aboard, and I hope your onboarding goes smoothly"
@@ -36,7 +36,7 @@
 			"If you need any help, don't hesitate to reach out"
 		],
 		"Stacy":[
-			"Hi. I'm Stacy. I'm usually the one responsible for sql.",
+			"Hi. I'm Stacy. I'm usually the one responsible for SQL.",
 			"If you need any help, let me know!"
 		],
 		"Manager":[
@@ -63,7 +63,7 @@
 			"If you need any help, don't hesitate to reach out"
 		],
 		"Stacy":[
-			"Hi. I'm Stacy. I'm usually the one responsible for sql.",
+			"Hi. I'm Stacy. I'm usually the one responsible for SQL.",
 			"If you need any help, let me know!"
 		],
 		"Manager":[
@@ -80,7 +80,7 @@
 			"You must be the new hire. Here is the access to your work id and softwares."
 		],
 		"Stacy":[
-			"Hi. I'm Stacy. I'm usually the one responsible for sql.",
+			"Hi. I'm Stacy. I'm usually the one responsible for SQL.",
 			"If you need any help, let me know!"
 		],
 		"Alice":[
