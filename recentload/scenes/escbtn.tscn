@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci0w76gs0iwih"]
+
+[ext_resource type="Script" uid="uid://bsxqrskvdsgu0" path="res://scenes/leave.gd" id="2_8mqb4"]
+[ext_resource type="Texture2D" uid="uid://cxmcbpkval2sd" path="res://use/action_box.png" id="2_16v3e"]
+[ext_resource type="Script" uid="uid://4ushyrg5md3o" path="res://scenes/help.gd" id="2_fx1cq"]
+
+[node name="escapebtn" type="Control"]
+layout_mode = 3
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 196.0
+offset_top = 196.0
+offset_right = 1022.0
+offset_bottom = 575.0
+texture = ExtResource("2_16v3e")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.136
+anchor_right = 0.879
+anchor_bottom = 0.397
+offset_left = -12.25
+offset_top = -3.54401
+offset_right = -13.9021
+offset_bottom = -3.86801
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 35
+text = "Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Help" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.464
+anchor_top = 0.466
+anchor_right = 0.464
+anchor_bottom = 0.466
+offset_left = -90.264
+offset_top = -20.614
+offset_right = 122.736
+offset_bottom = 31.386
+text = "Help"
+script = ExtResource("2_fx1cq")
+
+[node name="leave" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.484
+anchor_top = 0.673
+anchor_right = 0.484
+anchor_bottom = 0.673
+offset_left = -105.784
+offset_top = -26.067
+offset_right = 106.216
+offset_bottom = 25.933
+text = "Exit"
+script = ExtResource("2_8mqb4")
+
+[connection signal="pressed" from="TextureRect/Help" to="TextureRect/Help" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/leave" to="TextureRect/leave" method="_on_pressed"]

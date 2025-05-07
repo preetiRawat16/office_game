@@ -45,6 +45,10 @@ func update_dialogue():
 	if dialogue_index < npc_dialogues.size():
 		npc_name_label.text = current_npc.capitalize()
 		full_text = npc_dialogues[dialogue_index]
+		if current_npc == "HR":
+			npc_name_label.text = "HR"
+		else:
+			npc_name_label.text = current_npc.capitalize()
 		displayed_text = ""
 		char_index = 0
 		dialogue_label.text = ""
